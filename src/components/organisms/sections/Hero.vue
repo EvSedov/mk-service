@@ -4,14 +4,31 @@
     <Header />
     <div class="hero-bg container">
       <div class="hero__content flex">
-        
+        <div class="flex flex-col gap-10.5">
+          <h2 class="w-[630px] m-0 p-0 text-[76px]/20 text-white font-black!">
+            Ваш партнер по
+            <span class="font-black! text-[#FFD13D]">снабжению</span>
+          </h2>
+          <p class="text-white text-xl/tight w-[394px] font-bold!">
+            Оперативные поставки расходных материалов в Новосибирске
+          </p>
+          <p class="text-white font-normal! w-[318px] text-base/tight">
+            Для монолитчиков, каменщиков, отделочников и других специалистов
+          </p>
+          <Button
+            label="Контакты"
+            class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold! rounded-xl"
+          />
+        </div>
+        <div class="content-right"></div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import Header from '../Header.vue';
+import Header from '@/components/organisms/Header.vue';
+import Button from '@/components/atoms/Button.vue';
 </script>
 
 <style scoped>
@@ -28,7 +45,7 @@ import Header from '../Header.vue';
 
 .hero-bg {
   height: 100%;
-  position: relative; 
+  position: relative;
 }
 
 .hero-filter {
@@ -44,5 +61,6 @@ import Header from '../Header.vue';
 .hero__content {
   position: relative;
   z-index: 20;
+  padding-top: 48px;
 }
 </style>
