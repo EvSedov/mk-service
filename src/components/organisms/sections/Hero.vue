@@ -3,7 +3,9 @@
     <div class="hero-filter"></div>
     <Header />
     <div class="hero-bg container">
-      <div class="hero__content flex"></div>
+      <div class="hero__content flex">
+        
+      </div>
     </div>
   </section>
 </template>
