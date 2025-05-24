@@ -1,93 +1,63 @@
 <template>
-  <header class="header">
-    <div class="logo">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        aria-label="Логотип"
-        role="img"
-        class="logo-svg"
-      >
-        <rect width="100" height="100" fill="#007bff" />
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="20">
-          Логотип
-        </text>
-      </svg>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Продукция</a></li>
-        <li><a href="#">Партнеры</a></li>
-        <li><a href="#">Команда</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="contact-info">
-      <p>Отдел продаж</p>
-      <p>+7 (913) 740-03-63</p>
-      <p>пн-пт 09:00-17:00 (НСК)</p>
+  <header class="bg-gray-800 py-8">
+    <div class="flex items-center container">
+      <div class="header__logo">
+        <Logo />
+      </div>
+      <nav class="header__nav">
+        <ul class="flex space-x-4">
+          <li><a href="#main" class="text-white font-bold text-lg">Главная</a></li>
+          <li><a href="#products" class="text-white font-bold text-lg">Продукция</a></li>
+          <li><a href="#partners" class="text-white font-bold text-lg">Партнеры</a></li>
+          <li><a href="#team" class="text-white font-bold text-lg">Команда</a></li>
+          <li><a href="#contacts" class="text-white font-bold text-lg">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__contact text-white">
+        <span class="font-light">Отдел продаж</span>
+        <span class="font-bold text-[#FFD13D] text-xl">+7 (913) 740-00-03</span>
+        <span>пн-пт 09:00 - 17:00 (НСК)</span>
+      </div>
     </div>
   </header>
 </template>
 
+<script setup lang="ts">
+import Logo from '@/components/atoms/Logo.vue';
+</script>
+
 <style scoped>
 .header {
-  width: 100%;
-  padding: 1rem 0;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--vt-c-black-mute);
+}
+
+.header__content {
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  line-height: 1.5;
 }
 
-.logo-svg {
-  max-height: 50px;
-  height: 50px;
-}
-
-.nav ul {
-  display: flex;
+.header__nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  margin-left: 70px;
+  gap: 32px;
 }
 
-.nav li {
-  margin: 0 1rem;
-}
-
-.nav a {
+.header__nav a {
   text-decoration: none;
-  color: #333; /* Цвет текста */
-  transition: color 0.3s;
+  color: #ffffff;
+  font-size: 20px; 
+  line-height: 24px; 
+  font-weight: bold;
 }
 
-.nav a:hover {
-  color: #007bff; /* Цвет при наведении */
-}
-
-.contact-info {
-  text-align: right;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.header__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: auto;
 }
 </style>

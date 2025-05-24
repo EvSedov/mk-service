@@ -4,7 +4,7 @@ import Footer from '@/components/organisms/Footer.vue'
 </script>
 
 <template>
-  <div class="container layout">
+  <div class="layout">
     <Header />
     <main class="main-content">
       <slot />
@@ -15,6 +15,7 @@ import Footer from '@/components/organisms/Footer.vue'
 
 <style scoped>
 .layout {
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
