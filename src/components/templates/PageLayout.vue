@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Header from '@/components/organisms/Header.vue'
+import Hero from '../organisms/sections/Hero.vue';
 import Footer from '@/components/organisms/Footer.vue'
 </script>
 
 <template>
   <div class="layout">
-    <Header />
+    <Hero />
     <main class="main-content">
       <slot />
     </main>

@@ -1,6 +1,5 @@
 <template>
-  <header class="header bg-gray-800/50">
-    <div class="header-filter"></div>
+  <section class="header">
     <div class="header__content flex items-center container py-8">
         <div class="header__logo">
           <Logo />
@@ -20,7 +19,7 @@
           <span>пн-пт 09:00 - 17:00 (НСК)</span>
         </div>
     </div>
-  </header>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -29,24 +28,7 @@ import Logo from '@/components/atoms/Logo.vue';
 
 <style scoped>
 .header {
-  background-color: var(--vt-c-black-mute);
-  position: relative; 
-  background-image: url('@/assets/images/bg-header-hero-80.jpg');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.header-filter {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(56, 70, 81, 0.7);
-  backdrop-filter: blur(2px); /* Эффект размытия */
-  z-index: 1;
+  background-color: rgba(56, 70, 81, 0.4);
 }
 
 .header__content {

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import PageLayout from '@/components/templates/PageLayout.vue'
+import Hero from '../organisms/sections/Hero.vue';
 </script>
 
 <template>
   <PageLayout>
-    <h2>Главная страница</h2>
-    <!-- Контент -->
+    
   </PageLayout>
 </template>
