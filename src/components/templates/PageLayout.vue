@@ -1,0 +1,26 @@
+<script setup lang="ts">
+import Header from '@/components/organisms/Header.vue'
+import Footer from '@/components/organisms/Footer.vue'
+</script>
+
+<template>
+  <div class="container layout">
+    <Header />
+    <main class="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</template>
+
+<style scoped>
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+</style> 
