@@ -32,6 +32,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-// Компонент не принимает пропсы
-</script>
+<script setup lang="ts"></script>
