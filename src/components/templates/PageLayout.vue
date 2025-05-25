@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import Hero from '../organisms/sections/Hero.vue';
-import Footer from '@/components/organisms/Footer.vue'
+import Footer from '@/components/organisms/Footer.vue';
 </script>
 
 <template>
   <div class="layout">
-    <Hero />
     <main class="main-content">
       <slot />
     </main>
@@ -24,4 +22,4 @@ import Footer from '@/components/organisms/Footer.vue'
 .main-content {
   flex: 1 0 auto;
 }
-</style> 
+</style>

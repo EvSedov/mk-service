@@ -3,10 +3,11 @@
     <div class="hero-filter"></div>
     <Header />
     <div class="hero-bg container">
-      <div class="hero__content flex">
-        <div class="flex flex-col gap-10.5">
-          <h2 class="w-[630px] m-0 p-0 text-[76px]/20 text-white font-black!">
-            Ваш партнер по
+      <div class="hero__content flex items-start justify-between w-full">
+        <div class="flex flex-col gap-10.5 max-w-[50%]">
+          <h2 class="m-0 p-0 text-[76px]/[1.1] text-white font-black!">
+            Ваш партнер <br />
+            по
             <span class="font-black! text-[#FFD13D]">снабжению</span>
           </h2>
           <p class="text-white text-xl/tight w-[394px] font-bold!">
@@ -20,7 +21,8 @@
             class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold! rounded-xl"
           />
         </div>
-        <div class="content-right"></div>
+
+        <StatisticsCard />
       </div>
     </div>
   </section>
@@ -29,6 +31,7 @@
 <script setup lang="ts">
 import Header from '@/components/organisms/Header.vue';
 import Button from '@/components/atoms/Button.vue';
+import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 </script>
 
 <style scoped>
@@ -62,5 +65,6 @@ import Button from '@/components/atoms/Button.vue';
   position: relative;
   z-index: 20;
   padding-top: 48px;
+  margin: auto;
 }
 </style>

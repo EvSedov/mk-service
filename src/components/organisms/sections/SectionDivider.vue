@@ -40,7 +40,7 @@ defineProps<{
   left: 0;
   right: 0;
   top: 55%;
-  height: 14px;
+  height: 22px;
   background-color: white;
   z-index: 1;
   transform: translateY(-50%);

@@ -6,6 +6,7 @@ import SectionDivider from '@/components/organisms/sections/SectionDivider.vue';
 
 <template>
   <PageLayout>
+    <Hero />
     <SectionDivider
       title="Продукция"
       text="Снабжение строительных объектов расходными материалами"
