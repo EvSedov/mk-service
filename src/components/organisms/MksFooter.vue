@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Логика футера (опционально)
+// Логика футера (оционально)
 </script>
 
 <template>
@@ -18,4 +18,4 @@
   text-align: center;
   color: #888;
 }
-</style> 
+</style>

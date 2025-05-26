@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="flex flex-col gap-10 rounded-3xl bg-slate-800/70 p-13">
     <div class="mb-5">
@@ -31,5 +33,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>

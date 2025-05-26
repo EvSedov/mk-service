@@ -1,7 +1,13 @@
+<script setup lang="ts">
+import MksHeader from '@/components/organisms/MksHeader.vue';
+import MksButton from '@/components/atoms/MksButton.vue';
+import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
+</script>
+
 <template>
   <section class="hero">
     <div class="hero-filter"></div>
-    <Header />
+    <MksHeader />
     <div class="hero-bg container">
       <div class="hero__content flex items-start justify-between w-full">
         <div class="flex flex-col gap-10.5 max-w-[50%]">
@@ -16,7 +22,7 @@
           <p class="text-white font-normal! w-[318px] text-base/tight">
             Для монолитчиков, каменщиков, отделочников и других специалистов
           </p>
-          <Button
+          <MksButton
             label="Контакты"
             class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold! rounded-xl"
           />
@@ -27,12 +33,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import Header from '@/components/organisms/Header.vue';
-import Button from '@/components/atoms/Button.vue';
-import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
-</script>
 
 <style scoped>
 .hero {

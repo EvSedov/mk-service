@@ -1,10 +1,15 @@
+<script setup lang="ts">
+import MksLogo from '@/components/atoms/MksLogo.vue';
+import IconPhone from '../icons/IconPhone.vue';
+</script>
+
 <template>
   <section class="header">
     <div
       class="header__content flex items-center justify-between container py-8"
     >
       <div class="header__logo">
-        <Logo />
+        <MksLogo />
       </div>
       <nav class="header__nav">
         <ul class="flex space-x-4">
@@ -44,11 +49,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-import Logo from '@/components/atoms/Logo.vue';
-import IconPhone from '../icons/IconPhone.vue';
-</script>
 
 <style scoped>
 .header {

@@ -1,7 +1,7 @@
 <template>
   <svg
-    class="w-5.5 h-5.5"
     id="uuid-7abd429e-e8a9-4df8-a839-1ef923023735"
+    class="w-5.5 h-5.5"
     data-name="Слой 2"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 20.54 20.62"

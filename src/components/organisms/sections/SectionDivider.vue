@@ -1,3 +1,10 @@
+<script setup lang="ts">
+defineProps<{
+  title: string;
+  text: string;
+}>();
+</script>
+
 <template>
   <section class="section-divider">
     <div class="container">
@@ -9,13 +16,6 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-defineProps<{
-  title: string;
-  text: string;
-}>();
-</script>
 
 <style scoped>
 .section-divider {

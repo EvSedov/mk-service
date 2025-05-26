@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Footer from '@/components/organisms/Footer.vue';
+import MksFooter from '@/components/organisms/MksFooter.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import Footer from '@/components/organisms/Footer.vue';
     <main class="main-content">
       <slot />
     </main>
-    <Footer />
+    <MksFooter />
   </div>
 </template>
 
