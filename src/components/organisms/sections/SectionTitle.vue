@@ -6,19 +6,19 @@ defineProps<{
 </script>
 
 <template>
-  <section class="section-divider">
+  <section class="section-title">
     <div class="container">
-      <div class="section-divider__title-wrapper">
-        <div class="section-divider__line"></div>
-        <h2 class="section-divider__title">{{ title }}</h2>
+      <div class="section-title__title-wrapper">
+        <div class="section-title__line"></div>
+        <h2 class="section-title__title">{{ title }}</h2>
       </div>
-      <p class="section-divider__text">{{ text }}</p>
+      <p class="section-title__text">{{ text }}</p>
     </div>
   </section>
 </template>
 
 <style scoped>
-.section-divider {
+.section-title {
   background-color: #ffd13d;
 
   width: 100%;
@@ -26,7 +26,7 @@ defineProps<{
   padding-bottom: 60px;
 }
 
-.section-divider__title-wrapper {
+.section-title__title-wrapper {
   position: relative;
   margin: 0 auto;
 
@@ -35,7 +35,7 @@ defineProps<{
   text-align: center;
 }
 
-.section-divider__line {
+.section-title__line {
   position: absolute;
   left: 0;
   right: 0;
@@ -46,7 +46,7 @@ defineProps<{
   transform: translateY(-50%);
 }
 
-.section-divider__title {
+.section-title__title {
   color: #14213d;
 
   font-size: 84px;
@@ -60,7 +60,7 @@ defineProps<{
   display: inline-block;
 }
 
-.section-divider__text {
+.section-title__text {
   color: #14213d;
   font-size: 20px;
 
