@@ -67,5 +67,3 @@ const commercialOffer = {
     </div>
   </section>
 </template>
-
-<style scoped></style>
