@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MksLogo from '@/components/atoms/MksLogo.vue';
-import IconPhone from '../icons/IconPhone.vue';
+import IconPhone from '@/components/atoms/icons/IconPhone.vue';
 </script>
 
 <template>
