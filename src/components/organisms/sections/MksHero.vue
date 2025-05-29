@@ -6,7 +6,7 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 
 <template>
   <section class="hero">
-    <div class="hero-filter"></div>
+    <div class="bg-filter"></div>
     <MksHeader />
     <div class="hero-bg container">
       <div class="hero__content flex items-start justify-between w-full">
@@ -51,7 +51,7 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
   position: relative;
 }
 
-.hero-filter {
+.bg-filter {
   position: absolute;
   top: 0;
   left: 0;

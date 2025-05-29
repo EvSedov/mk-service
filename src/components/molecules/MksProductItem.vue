@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   image: string;
   description: string;
 }>();
@@ -7,14 +7,13 @@ defineProps<{
 
 <template>
   <div class="flex items-center gap-6">
-    <!-- Placeholder for image/icon -->
     <div
-      class="w-20 h-20 rounded-full bg-gray-300 flex items-center justify-center"
+      class="w-40 h-40 rounded-full bg-gray-300 flex items-center justify-center"
     >
-      <span class="text-sm text-gray-600">Иконка</span>
+      <img :src="props.image" :alt="props.description" />
     </div>
     <p class="text-white text-xl/tight font-semibold flex-1">
-      {{ description }}
+      {{ props.description }}
     </p>
   </div>
 </template>
