@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import Brand from '@/components/atoms/Brand.vue';
+import MksBrand from '@/components/atoms/MksBrand.vue';
 
 // Функция для перемешивания массива (Fisher-Yates Shuffle)
 const shuffleArray = (array) => {
@@ -100,7 +100,7 @@ const shuffledBrandsBottom = ref([
             class="brand-item"
             :class="{ 'stels-logo': brand.alt === 'Логотип Stels' }"
           >
-            <Brand :src="brand.src" :alt="brand.alt" />
+            <MksBrand :src="brand.src" :alt="brand.alt" />
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const shuffledBrandsBottom = ref([
             class="brand-item"
             :class="{ 'stels-logo': brand.alt === 'Логотип Stels' }"
           >
-            <Brand :src="brand.src" :alt="brand.alt" />
+            <MksBrand :src="brand.src" :alt="brand.alt" />
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ const shuffledBrandsBottom = ref([
             class="brand-item"
             :class="{ 'stels-logo': brand.alt === 'Логотип Stels' }"
           >
-            <Brand :src="brand.src" :alt="brand.alt" />
+            <MksBrand :src="brand.src" :alt="brand.alt" />
           </div>
         </div>
       </div>

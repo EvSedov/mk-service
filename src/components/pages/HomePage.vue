@@ -4,6 +4,7 @@ import MksHero from '../organisms/sections/MksHero.vue';
 import SectionTitle from '@/components/organisms/sections/SectionTitle.vue';
 import MksProductsSection from '../organisms/sections/MksProductsSection.vue';
 import MksBrandsLogosSection from '../organisms/sections/MksBrandsLogosSection.vue';
+import MksClientLogosSection from '../organisms/sections/MksClientLogosSection.vue';
 </script>
 
 <template>
@@ -20,5 +21,6 @@ import MksBrandsLogosSection from '../organisms/sections/MksBrandsLogosSection.v
     />
     <MksBrandsLogosSection />
     <SectionTitle title="Партнеры" text="Компании, которые нам доверяют" />
+    <MksClientLogosSection />
   </PageLayout>
 </template>
