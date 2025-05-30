@@ -22,5 +22,9 @@ import MksClientLogosSection from '../organisms/sections/MksClientLogosSection.v
     <MksBrandsLogosSection />
     <SectionTitle title="Партнеры" text="Компании, которые нам доверяют" />
     <MksClientLogosSection />
+    <SectionTitle
+      title="Команда"
+      text="Гарантия четких поставок на ваши объекты"
+    />
   </PageLayout>
 </template>
