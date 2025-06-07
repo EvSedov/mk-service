@@ -196,12 +196,14 @@ const rows = computed(() => {
           v-for="(client, clientIndex) in row"
           :key="clientIndex"
           :logo="client.logo"
+          :name="client.name"
         />
         <!-- Duplicate logos for seamless looping -->
         <MksClientLogoCard
           v-for="(client, clientIndex) in row"
           :key="`dup-${clientIndex}`"
           :logo="client.logo"
+          :name="client.name"
         />
       </div>
     </div>

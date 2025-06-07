@@ -6,6 +6,10 @@ defineProps({
     type: String,
     required: true,
   },
+  name: {
+    type: String,
+    default: '',
+  },
 });
 
 const cardWidthClasses = computed(() => {
