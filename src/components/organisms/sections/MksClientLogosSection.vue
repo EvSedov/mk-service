@@ -3,71 +3,148 @@ import { ref, computed } from 'vue';
 import MksClientLogoCard from '@/components/molecules/MksClientLogoCard.vue'; // Adjust path as needed
 
 // Placeholder background image (replace with actual path)
-const backgroundImage = 'path/to/your/background-image.jpg'; // TODO: Replace with actual image path
+const backgroundImage = new URL(
+  '/src/assets/images/bg-clients.jpeg',
+  import.meta.url
+).href; // TODO: Replace with actual image path
 
 // Placeholder client data (replace with actual data)
 const clients = ref([
-  { logo: '/placeholders/logo1.png', name: 'АН2', description: '' },
-  { logo: '/placeholders/logo2.png', name: 'ОПТИМА', description: '' },
   {
-    logo: '/placeholders/logo3.png',
+    logo: new URL('/src/assets/icons/clients/titan2.png', import.meta.url).href,
+    name: 'АН2',
+    description: '',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/optima.png', import.meta.url).href,
+    name: 'ОПТИМА',
+    description: '',
+  },
+  {
+    logo: new URL(
+      '/src/assets/icons/clients/stroy-mont-upr.png',
+      import.meta.url
+    ).href,
     name: 'Строительно-монтажное управление СМУ 7',
     description: '',
   },
   {
-    logo: '/placeholders/logo4.png',
+    logo: new URL('/src/assets/icons/clients/olimp-stroy.png', import.meta.url)
+      .href,
     name: 'OLIMPSTROYGROUP',
     description: 'СТРОИТЕЛЬНАЯ КОМПАНИЯ',
   },
-  { logo: '/placeholders/logo5.png', name: 'PROF ENERGY', description: '' },
-  { logo: '/placeholders/logo6.png', name: 'Сиб', description: '' },
   {
-    logo: '/placeholders/logo7.png',
+    logo: new URL('/src/assets/icons/clients/prof-energy.png', import.meta.url)
+      .href,
+    name: 'PROF ENERGY',
+    description: '',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/sibit.png', import.meta.url).href,
+    name: 'Сиб',
+    description: '',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/left-karier.png', import.meta.url)
+      .href,
     name: 'Побережный Ланый Карьер',
     description: '',
   },
   {
-    logo: '/placeholders/logo8.png',
+    logo: new URL('/src/assets/icons/clients/m2.png', import.meta.url).href,
     name: 'М2 РЕКОНСТРУКЦИЯ',
     description: '',
   },
   {
-    logo: '/placeholders/logo9.png',
+    logo: new URL('/src/assets/icons/clients/himmetall.png', import.meta.url)
+      .href,
     name: 'ХИММЕТАЛЛ',
     description: 'ГРУППА КОМПАНИЙ',
   },
-  { logo: '/placeholders/logo10.png', name: 'Искитим', description: 'ИЗВЕСТЬ' },
-  { logo: '/placeholders/logo11.png', name: 'СМК 54', description: '' },
-  { logo: '/placeholders/logo12.png', name: 'Регион', description: '' },
-  { logo: '/placeholders/logo13.png', name: 'Проект', description: '' },
-  { logo: '/placeholders/logo14.png', name: 'Сибстройпроект', description: '' },
-  { logo: '/placeholders/logo15.png', name: 'Берёзки', description: '' },
   {
-    logo: '/placeholders/logo16.png',
+    logo: new URL(
+      '/src/assets/icons/clients/iskitim-izvest.png',
+      import.meta.url
+    ).href,
+    name: 'Искитим',
+    description: 'ИЗВЕСТЬ',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/smk.png', import.meta.url).href,
+    name: 'СМК 54',
+    description: '',
+  },
+  {
+    logo: new URL(
+      '/src/assets/icons/clients/region-project.png',
+      import.meta.url
+    ).href,
+    name: 'Регион',
+    description: '',
+  },
+  {
+    logo: new URL(
+      '/src/assets/icons/clients/region-project.png',
+      import.meta.url
+    ).href,
+    name: 'Проект',
+    description: '',
+  }, // Re-using, as no specific 'Project' logo
+  {
+    logo: new URL('/src/assets/icons/clients/l-14.png', import.meta.url).href,
+    name: 'Сибстройпроект',
+    description: '',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/berezki.png', import.meta.url)
+      .href,
+    name: 'Берёзки',
+    description: '',
+  },
+  {
+    logo: new URL(
+      '/src/assets/icons/clients/energi-holding.png',
+      import.meta.url
+    ).href,
     name: 'Энергохолдинг',
     description: 'ПРОЕКТИРОВАНИЕ | ПРОИЗВОДСТВО | ПОСТАВКИ | МОНТАЖ',
   },
   {
-    logo: '/placeholders/logo17.png',
+    logo: new URL(
+      '/src/assets/icons/clients/sib-gidro-mex-stroy.png',
+      import.meta.url
+    ).href,
     name: 'Сибгидромехстрой',
     description: '',
   },
-  { logo: '/placeholders/logo18.png', name: 'ЗЖБИ-4', description: '' },
-  { logo: '/placeholders/logo19.png', name: '4', description: '' },
   {
-    logo: '/placeholders/logo20.png',
+    logo: new URL('/src/assets/icons/clients/zzbi-4.png', import.meta.url).href,
+    name: 'ЗЖБИ-4',
+    description: '',
+  },
+  {
+    logo: new URL('/src/assets/icons/clients/l-21.png', import.meta.url).href,
+    name: '4',
+    description: '',
+  }, // Generic '4' logo
+  {
+    logo: new URL('/src/assets/icons/clients/sukhoi.png', import.meta.url).href,
     name: 'SUKHOI',
     description: 'НАЗ им. В. П. Чкалова',
   },
   {
-    logo: '/placeholders/logo21.png',
+    logo: new URL('/src/assets/icons/clients/vira-stroy.png', import.meta.url)
+      .href,
     name: 'Вира Строй',
     description: 'строительная компания',
   },
-  { logo: '/placeholders/logo22.png', name: 'AST GROUP', description: '' },
-  { logo: '/placeholders/logo23.png', name: '', description: '' }, // Placeholder for the D logo
-  { logo: '/placeholders/logo24.png', name: 'Лево Песчан', description: '' },
-  // Add more logos as needed, keeping total around 22-24 for 4 rows
+  {
+    logo: new URL('/src/assets/icons/clients/ast-group.png', import.meta.url)
+      .href,
+    name: 'AST GROUP',
+    description: '',
+  },
 ]);
 
 // Function to shuffle an array (Fisher-Yates Algorithm)
@@ -81,7 +158,7 @@ const shuffleArray = (array) => {
 
 // Distribute and shuffle clients into 4 rows
 const rows = computed(() => {
-  const shuffledClients = shuffleArray([...clients.value]); // Shuffle a copy
+  const shuffledClients = shuffleArray([...clients.value, ...clients.value]); // Shuffle a copy
   const numClients = shuffledClients.length;
   const clientsPerRow = Math.ceil(numClients / 4); // Distribute roughly evenly
 
@@ -119,16 +196,12 @@ const rows = computed(() => {
           v-for="(client, clientIndex) in row"
           :key="clientIndex"
           :logo="client.logo"
-          :name="client.name"
-          :description="client.description"
         />
         <!-- Duplicate logos for seamless looping -->
         <MksClientLogoCard
           v-for="(client, clientIndex) in row"
           :key="`dup-${clientIndex}`"
           :logo="client.logo"
-          :name="client.name"
-          :description="client.description"
         />
       </div>
     </div>
