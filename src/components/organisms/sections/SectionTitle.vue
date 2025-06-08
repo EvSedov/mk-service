@@ -6,7 +6,6 @@ const props = defineProps<{
   text: string;
 }>();
 
-// Генерируем ID для секции на основе заголовка
 const sectionId = computed(() => {
   return props.title.toLowerCase().replace(/\s/g, '-');
 });
@@ -14,7 +13,7 @@ const sectionId = computed(() => {
 
 <template>
   <section :id="sectionId" class="section-title">
-    <div class="container">
+    <div class="container w-full">
       <div class="section-title__title-wrapper">
         <div class="section-title__line"></div>
         <h2 class="section-title__title">{{ title }}</h2>
@@ -49,7 +48,7 @@ const sectionId = computed(() => {
   top: 55%;
   height: 22px;
   background-color: white;
-  z-index: 1;
+  z-index: 10;
   transform: translateY(-50%);
 }
 
@@ -63,7 +62,7 @@ const sectionId = computed(() => {
 
   margin: 0 4px;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   display: inline-block;
 }
 
