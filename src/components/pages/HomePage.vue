@@ -6,6 +6,7 @@ import MksProductsSection from '@/components/organisms/sections/MksProductsSecti
 import MksBrandsLogosSection from '@/components/organisms/sections/MksBrandsLogosSection.vue';
 import MksClientLogosSection from '@/components/organisms/sections/MksClientLogosSection.vue';
 import MksTeam from '@/components/organisms/sections/MksTeam.vue';
+import MksInfo from '@/components/organisms/sections/MksInfo.vue';
 </script>
 
 <template>
@@ -32,5 +33,6 @@ import MksTeam from '@/components/organisms/sections/MksTeam.vue';
       title="Контакты"
       text="Свяжитесь с нами для составления заявки"
     />
+    <MksInfo />
   </PageLayout>
 </template>
