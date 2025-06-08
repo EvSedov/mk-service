@@ -1,6 +1,22 @@
 <script setup lang="ts">
 import MksLogo from '@/components/atoms/MksLogo.vue';
 import IconPhone from '@/components/atoms/icons/IconPhone.vue';
+
+const scrollToSection = (event: Event, targetId: string) => {
+  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+  // Специальный случай для "Главная" - прокрутка в начало страницы
+  if (targetId === 'main') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+
+  const element = document.getElementById(targetId);
+  if (element) {
+    // Используем scrollIntoView для плавной прокрутки
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 </script>
 
 <template>
@@ -14,23 +30,42 @@ import IconPhone from '@/components/atoms/icons/IconPhone.vue';
       <nav class="header__nav">
         <ul class="flex space-x-4">
           <li>
-            <a href="#main" class="text-white font-bold text-lg">Главная</a>
+            <a
+              href="#main"
+              class="text-white font-bold text-lg"
+              @click="scrollToSection($event, 'main')"
+              >Главная</a
+            >
           </li>
           <li>
-            <a href="#products" class="text-white font-bold text-lg"
+            <a
+              href="#продукция"
+              class="text-white font-bold text-lg"
+              @click="scrollToSection($event, 'продукция')"
               >Продукция</a
             >
           </li>
           <li>
-            <a href="#partners" class="text-white font-bold text-lg"
+            <a
+              href="#партнеры"
+              class="text-white font-bold text-lg"
+              @click="scrollToSection($event, 'партнеры')"
               >Партнеры</a
             >
           </li>
           <li>
-            <a href="#team" class="text-white font-bold text-lg">Команда</a>
+            <a
+              href="#команда"
+              class="text-white font-bold text-lg"
+              @click="scrollToSection($event, 'команда')"
+              >Команда</a
+            >
           </li>
           <li>
-            <a href="#contacts" class="text-white font-bold text-lg"
+            <a
+              href="#контакты"
+              class="text-white font-bold text-lg"
+              @click="scrollToSection($event, 'контакты')"
               >Контакты</a
             >
           </li>

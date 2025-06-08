@@ -1,12 +1,19 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue';
+
+const props = defineProps<{
   title: string;
   text: string;
 }>();
+
+// Генерируем ID для секции на основе заголовка
+const sectionId = computed(() => {
+  return props.title.toLowerCase().replace(/\s/g, '-');
+});
 </script>
 
 <template>
-  <section class="section-title">
+  <section :id="sectionId" class="section-title">
     <div class="container">
       <div class="section-title__title-wrapper">
         <div class="section-title__line"></div>
