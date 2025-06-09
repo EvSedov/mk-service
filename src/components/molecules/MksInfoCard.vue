@@ -17,34 +17,37 @@ const companyData = {
 
 const downloadRequisites = () => {
   // Логика для скачивания файла, например:
-  window.open(companyData.button.link, '_blank');
   console.log('Скачать реквизиты');
 };
 </script>
 
 <template>
   <div
-    class="bg-[#F7D156] p-6 rounded-2xl shadow-xl flex flex-col items-start space-y-4 max-w-sm mx-auto md:max-w-md lg:max-w-lg"
+    class="bg-[#F7D156] p-12.5 rounded-2xl shadow-xl flex flex-col items-start space-y-4 max-w-sm mx-auto md:max-w-md lg:max-w-lg"
   >
-    <h2 class="text-2xl font-bold text-[#333333] mb-2">
+    <h2 class="text-[22px]! font-black! text-[#333333] mb-8!">
       {{ companyData.name }}
     </h2>
 
-    <div
-      v-for="(item, index) in companyData.details"
-      :key="index"
-      class="w-full"
-    >
-      <div class="text-base font-bold text-[#333333]">{{ item.label }}</div>
+    <div class="mb-11.5!">
       <div
-        class="text-base font-normal text-[#333333] leading-relaxed whitespace-pre-line"
+        v-for="(item, index) in companyData.details"
+        :key="index"
+        class="w-full flex gap-4 items-start justify-start mb-6!"
       >
-        {{ item.value }}
+        <div class="w-16 text-base! font-bold! text-[#333333]">
+          {{ item.label }}
+        </div>
+        <div
+          class="text-[15px]/5! font-normal! text-[#333333] leading-relaxed whitespace-pre-line"
+        >
+          {{ item.value }}
+        </div>
       </div>
     </div>
 
     <button
-      class="w-full text-center bg-[#3366CC] text-white text-lg font-semibold py-3 px-6 rounded-full shadow-md hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 mt-4"
+      class="w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 mt-4"
       @click="downloadRequisites"
     >
       {{ companyData.button.text }}
