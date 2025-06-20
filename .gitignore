@@ -30,3 +30,12 @@ coverage
 *.tsbuildinfo
 
 resorces/
+
+# Added by Task Master AI
+dev-debug.log
+# Dependency directories
+node_modules/
+# Environment variables
+.env
+.vscode
+# OS specific
