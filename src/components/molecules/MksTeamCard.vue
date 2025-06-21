@@ -55,7 +55,7 @@ const { photo, fullName, job, email } = defineProps({
       </svg>
       <a
         :href="`mailto:${email}`"
-        class="text-[12px] text-black! font-black! hover:underline! hover:rounded-[4px] p-1!"
+        class="text-[12px] text-black font-black hover:bg-yellow-400/20 active:bg-yellow-600/40 rounded transition-colors duration-200 p-1"
         >{{ email }}</a
       >
     </div>

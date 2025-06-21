@@ -1,1038 +1,1120 @@
 {
-  "tasks": [
-    {
-      "id": 14,
-      "title": "Initialize Vue.js 3 Project with Vite",
-      "description": "Set up a new Vue.js 3 project using Vite as the build tool.",
-      "details": "Use the Vite scaffold for Vue.js 3: `npm init vite@latest my-vue-app --template vue`. Install dependencies with `npm install`.",
-      "testStrategy": "Verify the project structure and that the development server runs without errors.",
-      "priority": "high",
-      "dependencies": [],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Initialize the project using Vite",
-          "description": "Set up a new project using Vite.",
-          "dependencies": [],
-          "details": "Run the command to create a new Vite project.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Install dependencies",
-          "description": "Install all necessary dependencies for the project.",
-          "dependencies": [
-            1
-          ],
-          "details": "Run the command to install dependencies listed in the package.json file.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "title": "Set Up Tailwind CSS with PostCSS and Autoprefixer",
-      "description": "Integrate Tailwind CSS into the Vue.js project.",
-      "details": "Follow Tailwind CSS installation guide for Vite: `npm install -D tailwindcss postcss autoprefixer`. Initialize Tailwind CSS with `npx tailwindcss init -p`. Configure `tailwind.config.js` and `postcss.config.js`.",
-      "testStrategy": "Check that Tailwind CSS classes are working in the project.",
-      "priority": "high",
-      "dependencies": [
-        14
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Install Tailwind CSS, PostCSS, and Autoprefixer",
-          "description": "Install the necessary packages using npm or yarn.",
-          "dependencies": [],
-          "details": "Run the command: npm install tailwindcss postcss autoprefixer",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Initialize Tailwind CSS",
-          "description": "Create the Tailwind CSS configuration file.",
-          "dependencies": [
-            1
-          ],
-          "details": "Run the command: npx tailwindcss init",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Configure Tailwind CSS and PostCSS",
-          "description": "Set up the configuration files for Tailwind CSS and PostCSS.",
-          "dependencies": [
-            2
-          ],
-          "details": "Update the tailwind.config.js and postcss.config.js files with the necessary configurations.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "title": "Set Up ESLint and Prettier for Code Quality",
-      "description": "Configure ESLint and Prettier for consistent code style and quality.",
-      "details": "Install ESLint and Prettier: `npm install eslint prettier eslint-plugin-vue eslint-config-prettier eslint-plugin-prettier -D`. Create `.eslintrc.js` and `.prettierrc` configuration files. Add scripts for linting and formatting in `package.json`.",
-      "testStrategy": "Run ESLint and Prettier to ensure they are properly configured.",
-      "priority": "medium",
-      "dependencies": [
-        14
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Install ESLint and Prettier",
-          "description": "Install ESLint and Prettier as development dependencies.",
-          "dependencies": [],
-          "details": "Run `npm install eslint prettier --save-dev` or `yarn add eslint prettier --dev`.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Create ESLint Configuration File",
-          "description": "Generate an ESLint configuration file.",
-          "dependencies": [
-            1
-          ],
-          "details": "Run `npx eslint --init` and follow the prompts to create the configuration file.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Create Prettier Configuration File",
-          "description": "Generate a Prettier configuration file.",
-          "dependencies": [
-            1
-          ],
-          "details": "Create a `.prettierrc` file with your preferred configuration settings.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "title": "Set Up Husky and Lint-Staged for Git Hooks",
-      "description": "Configure Husky and Lint-Staged for automatic code checks before commits.",
-      "details": "Install Husky and Lint-Staged: `npm install husky lint-staged -D`. Set up Husky git hooks and configure Lint-Staged in `package.json`.",
-      "testStrategy": "Test git hooks by making a commit with linting errors.",
-      "priority": "medium",
-      "dependencies": [
-        14,
-        16
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Install Husky and Lint-Staged",
-          "description": "Add Husky and Lint-Staged to the project dependencies.",
-          "dependencies": [],
-          "details": "Run `npm install husky lint-staged --save-dev` to install the packages.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Set up Husky git hooks",
-          "description": "Configure Husky to use git hooks.",
-          "dependencies": [
-            1
-          ],
-          "details": "Add the necessary scripts in the package.json to enable Husky hooks.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Configure Lint-Staged in package.json",
-          "description": "Set up Lint-Staged to run linters on staged files.",
-          "dependencies": [
-            1,
-            2
-          ],
-          "details": "Add a lint-staged configuration in the package.json to specify which linters to run.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "title": "Create Basic Project Structure",
-      "description": "Set up the basic folder structure for the project.",
-      "details": "Create folders for `src/assets`, `src/components`, `src/views`, etc. Set up basic files like `App.vue` and `main.js`.",
-      "testStrategy": "Verify the project structure matches the requirements.",
-      "priority": "high",
-      "dependencies": [
-        14
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Create Folders",
-          "description": "Create folders for assets, components, and views.",
-          "dependencies": [],
-          "details": "Ensure the folders are created in the root directory of the project.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Set Up Basic Files",
-          "description": "Set up basic files like App.vue and main.js.",
-          "dependencies": [
-            1
-          ],
-          "details": "Initialize the project with essential files required for a Vue.js application.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "title": "Implement Atomic Design System",
-      "description": "Organize UI components following the atomic design methodology.",
-      "details": "Create subfolders in `src/components` for atoms, molecules, organisms, pages, and templates. Start by implementing basic atoms like buttons and icons.",
-      "testStrategy": "Verify that components are organized correctly and render as expected.",
-      "priority": "high",
-      "dependencies": [
-        15,
-        18
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Create Subfolders",
-          "description": "Create subfolders for atoms, molecules, organisms, pages, and templates.",
-          "dependencies": [],
-          "details": "Ensure each subfolder is correctly named and structured.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Implement Basic Atoms",
-          "description": "Implement basic atoms like buttons and icons.",
-          "dependencies": [
-            1
-          ],
-          "details": "Develop and test basic atom components.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Organize Components",
-          "description": "Organize components following atomic design methodology.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure components are structured according to atomic design principles.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Verify Component Organization and Rendering",
-          "description": "Verify component organization and rendering.",
-          "dependencies": [
-            3
-          ],
-          "details": "Check that all components are correctly organized and render as expected.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "title": "Develop Hero Section",
-      "description": "Create the hero section component for the homepage.",
-      "details": "Implement `MksHero` component in `src/components/organisms/sections`. Use Tailwind CSS for styling.",
-      "testStrategy": "Test the hero section in the browser to ensure it looks and behaves as expected.",
-      "priority": "high",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksHero Component",
-          "description": "Create the MksHero component with the necessary structure and functionality.",
-          "dependencies": [],
-          "details": "Ensure the component is functional and ready for styling.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Apply Tailwind CSS Styling",
-          "description": "Use Tailwind CSS to style the MksHero component.",
-          "dependencies": [
-            1
-          ],
-          "details": "Ensure the component is visually appealing and responsive.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Test Hero Section in Browser",
-          "description": "Test the MksHero component in the browser to ensure it works as expected.",
-          "dependencies": [
-            2
-          ],
-          "details": "Check for any bugs or issues and make necessary adjustments.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "title": "Develop Products Section",
-      "description": "Create the products section component to display the product catalog.",
-      "details": "Implement `MksProductsSection` component. Use a grid layout with Tailwind CSS to display products.",
-      "testStrategy": "Verify that products are displayed correctly and the section is responsive.",
-      "priority": "high",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksProductsSection Component",
-          "description": "Create the MksProductsSection component structure.",
-          "dependencies": [],
-          "details": "Set up the basic structure of the MksProductsSection component.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Apply Grid Layout with Tailwind CSS",
-          "description": "Style the MksProductsSection component using Tailwind CSS.",
-          "dependencies": [
-            1
-          ],
-          "details": "Use Tailwind CSS to apply a grid layout to the component.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Product Display and Responsiveness",
-          "description": "Test the MksProductsSection component for product display and responsiveness.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure the component displays products correctly and is responsive across different screen sizes.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "title": "Develop Brands Section",
-      "description": "Create the brands section to showcase partner brands.",
-      "details": "Implement `MksBrandsLogosSection` component. Use a carousel or grid layout to display brand logos.",
-      "testStrategy": "Check that brand logos are displayed correctly and the section is responsive.",
-      "priority": "medium",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksBrandsLogosSection Component",
-          "description": "Create the basic structure of the MksBrandsLogosSection component.",
-          "dependencies": [],
-          "details": "This involves setting up the component file, importing necessary libraries, and defining the basic structure.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Carousel or Grid Layout",
-          "description": "Integrate a carousel or grid layout into the MksBrandsLogosSection component.",
-          "dependencies": [
-            1
-          ],
-          "details": "Choose between a carousel or grid layout and implement it within the component.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Brand Logo Display and Responsiveness",
-          "description": "Test the display of brand logos and ensure the component is responsive.",
-          "dependencies": [
-            2
-          ],
-          "details": "Check the component on different screen sizes and ensure logos are displayed correctly.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 23,
-      "title": "Develop Clients Section",
-      "description": "Create the clients section to display client logos.",
-      "details": "Implement `MksClientLogosSection` component. Use a carousel or grid layout to display client logos.",
-      "testStrategy": "Verify that client logos are displayed correctly and the section is responsive.",
-      "priority": "medium",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksClientLogosSection Component",
-          "description": "Create the basic structure of the MksClientLogosSection component.",
-          "dependencies": [],
-          "details": "This involves setting up the component file, importing necessary dependencies, and creating the initial structure.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Carousel or Grid Layout",
-          "description": "Integrate a carousel or grid layout into the MksClientLogosSection component.",
-          "dependencies": [
-            1
-          ],
-          "details": "Choose between a carousel or grid layout and implement it within the component.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Client Logo Display and Responsiveness",
-          "description": "Test the display and responsiveness of client logos in the MksClientLogosSection component.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure that the logos are displayed correctly and the layout is responsive across different devices.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 24,
-      "title": "Develop Info Section",
-      "description": "Create the info section to provide company information.",
-      "details": "Implement `MksInfo` component. Use Tailwind CSS for styling and layout.",
-      "testStrategy": "Check that the info section displays correctly and is responsive.",
-      "priority": "medium",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksInfo Component",
-          "description": "Create the MksInfo component with the necessary structure and functionality.",
-          "dependencies": [],
-          "details": "Ensure the component is functional and meets the required specifications.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Apply Tailwind CSS for Styling",
-          "description": "Use Tailwind CSS to style the MksInfo component.",
-          "dependencies": [
-            1
-          ],
-          "details": "Ensure the component is styled according to the design guidelines.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Info Section Display and Responsiveness",
-          "description": "Test the MksInfo component to ensure it displays correctly and is responsive.",
-          "dependencies": [
-            2
-          ],
-          "details": "Check the component on different devices and screen sizes.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 25,
-      "title": "Develop Team Section",
-      "description": "Create the team section to showcase the company team.",
-      "details": "Implement `MksTeam` component. Use a grid layout to display team members.",
-      "testStrategy": "Verify that the team section displays correctly and is responsive.",
-      "priority": "medium",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement MksTeam Component",
-          "description": "Create the MksTeam component with basic structure and functionality.",
-          "dependencies": [],
-          "details": "This involves setting up the component file, initializing state, and handling basic props.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Use Grid Layout for Team Members",
-          "description": "Style the MksTeam component to use a grid layout for displaying team members.",
-          "dependencies": [
-            1
-          ],
-          "details": "Implement CSS or styled-components to create a responsive grid layout.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Team Section Display and Responsiveness",
-          "description": "Test the MksTeam component to ensure it displays correctly and is responsive.",
-          "dependencies": [
-            2
-          ],
-          "details": "Use browser developer tools to check responsiveness and ensure the grid layout adapts to different screen sizes.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 26,
-      "title": "Implement Header Component",
-      "description": "Create the header component for the website.",
-      "details": "Implement the header component in `src/components/organisms`. Include navigation menu and company logo.",
-      "testStrategy": "Test the header component to ensure it navigates correctly and is responsive.",
-      "priority": "high",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement Header Component",
-          "description": "Create the basic structure of the header component.",
-          "dependencies": [],
-          "details": "Include HTML and CSS for the header component.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Navigation Menu and Company Logo",
-          "description": "Include navigation menu items and company logo in the header.",
-          "dependencies": [
-            1
-          ],
-          "details": "Ensure the navigation menu is functional and the logo is displayed correctly.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Test Header Component",
-          "description": "Test the header component for navigation and responsiveness.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure the header works on different screen sizes and devices.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 27,
-      "title": "Implement Footer Component",
-      "description": "Create the footer component for the website.",
-      "details": "Implement the footer component in `src/components/organisms`. Include contact information and links.",
-      "testStrategy": "Verify that the footer displays correctly and is responsive.",
-      "priority": "high",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement Footer Component",
-          "description": "Create the basic structure of the footer component.",
-          "dependencies": [],
-          "details": "Use HTML and CSS to design the footer layout.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Contact Information and Links",
-          "description": "Include contact details and relevant links in the footer.",
-          "dependencies": [
-            1
-          ],
-          "details": "Ensure the contact information is accurate and links are functional.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Test Footer Display and Responsiveness",
-          "description": "Verify that the footer displays correctly and is responsive.",
-          "dependencies": [
-            2
-          ],
-          "details": "Test on different devices and screen sizes.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 28,
-      "title": "Implement Contact Form",
-      "description": "Create a contact form for users to request commercial proposals.",
-      "details": "Implement a form component in `src/components/molecules`. Use Vue.js for form handling and validation.",
-      "testStrategy": "Test the form to ensure it validates inputs and submits data correctly.",
-      "priority": "high",
-      "dependencies": [
-        19
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Create Form Component",
-          "description": "Develop the basic structure of the form component.",
-          "dependencies": [],
-          "details": "Use Vue.js to create the form component with necessary input fields.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Implement Form Handling",
-          "description": "Set up form handling using Vue.js.",
-          "dependencies": [
-            1
-          ],
-          "details": "Bind input fields to Vue.js data properties and handle form submission.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Add Form Validation",
-          "description": "Implement validation rules for the form fields.",
-          "dependencies": [
-            2
-          ],
-          "details": "Use Vue.js validation libraries or custom validation to ensure data integrity.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Test Form Functionality",
-          "description": "Write tests to verify form validation and submission.",
-          "dependencies": [
-            3
-          ],
-          "details": "Create unit tests to check if validation rules are applied correctly and form data is submitted properly.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 29,
-      "title": "Implement Page Layout",
-      "description": "Create a layout component for the website pages.",
-      "details": "Implement `PageLayout.vue` in `src/components/templates`. Include slots for header, main content, and footer.",
-      "testStrategy": "Verify that the layout component works correctly with different pages.",
-      "priority": "high",
-      "dependencies": [
-        26,
-        27
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Create PageLayout.vue",
-          "description": "Implement the basic structure of the PageLayout.vue component.",
-          "dependencies": [],
-          "details": "Ensure the component is set up with the necessary imports and basic structure.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Slots for Header, Main Content, and Footer",
-          "description": "Include slots in PageLayout.vue for header, main content, and footer.",
-          "dependencies": [
-            1
-          ],
-          "details": "Define slots for header, main content, and footer within the PageLayout.vue component.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify Layout Component with Different Pages",
-          "description": "Test the PageLayout.vue component with various pages to ensure it works correctly.",
-          "dependencies": [
-            2
-          ],
-          "details": "Create different pages and use the PageLayout.vue component to verify its functionality.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 30,
-      "title": "Implement Home Page",
-      "description": "Create the homepage component using the layout and sections.",
-      "details": "Implement `HomePage.vue` in `src/components/pages`. Use the layout component and include all sections.",
-      "testStrategy": "Test the homepage to ensure all sections display correctly.",
-      "priority": "high",
-      "dependencies": [
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        29
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Create HomePage.vue file",
-          "description": "Set up the basic structure for the HomePage.vue component.",
-          "dependencies": [],
-          "details": "Initialize the Vue component with basic template, script, and style sections.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Integrate layout component",
-          "description": "Use the layout component within HomePage.vue.",
-          "dependencies": [
-            1
-          ],
-          "details": "Import and include the layout component in the HomePage.vue template.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Add all sections to HomePage.vue",
-          "description": "Include all necessary sections in the HomePage.vue component.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure all required sections are present and correctly structured within the template.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Test homepage display",
-          "description": "Run the application to test the display of the homepage.",
-          "dependencies": [
-            3
-          ],
-          "details": "Verify that the homepage loads correctly in the browser.",
-          "status": "pending"
-        },
-        {
-          "id": 5,
-          "title": "Verify all sections display correctly",
-          "description": "Check that all sections are displayed as expected.",
-          "dependencies": [
-            4
-          ],
-          "details": "Ensure each section is rendered correctly and visually consistent.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 31,
-      "title": "Implement SEO Optimization",
-      "description": "Optimize the website for search engines.",
-      "details": "Use Vue meta information to set page titles, descriptions, and other SEO tags. Ensure all images have alt text.",
-      "testStrategy": "Use SEO tools to verify that the website is optimized.",
-      "priority": "medium",
-      "dependencies": [
-        30
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Implement Vue Meta Information",
-          "description": "Add meta tags for SEO using Vue Meta plugin.",
-          "dependencies": [],
-          "details": "Install Vue Meta plugin and configure meta tags for each page.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Add Alt Text to Images",
-          "description": "Ensure all images have descriptive alt text.",
-          "dependencies": [],
-          "details": "Review all images and add appropriate alt text for accessibility and SEO.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Verify SEO Optimization",
-          "description": "Use SEO tools to verify optimization.",
-          "dependencies": [
-            1,
-            2
-          ],
-          "details": "Utilize tools like Google Lighthouse, SEMrush, or Ahrefs to check SEO performance.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 32,
-      "title": "Implement Performance Optimization",
-      "description": "Optimize the website for performance.",
-      "details": "Use Vite's optimization features, lazy load images, and minify CSS and JavaScript.",
-      "testStrategy": "Use performance tools to verify that the website loads quickly.",
-      "priority": "medium",
-      "dependencies": [
-        30
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Enable Vite's Optimization Features",
-          "description": "Configure Vite to use its built-in optimization features.",
-          "dependencies": [],
-          "details": "Update Vite configuration to enable code splitting, tree shaking, and other optimizations.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Implement Lazy Loading for Images",
-          "description": "Modify the codebase to lazy load images.",
-          "dependencies": [],
-          "details": "Use the 'loading=lazy' attribute or a JavaScript library to lazy load images.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Minify CSS and JavaScript",
-          "description": "Minify all CSS and JavaScript files.",
-          "dependencies": [],
-          "details": "Use a minification tool or Vite's built-in minification to reduce file sizes.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 33,
-      "title": "Test Cross-Browser Compatibility",
-      "description": "Ensure the website works across different browsers.",
-      "details": "Test the website in Chrome, Firefox, Safari, and Edge. Fix any compatibility issues.",
-      "testStrategy": "Use browser testing tools to verify compatibility.",
-      "priority": "medium",
-      "dependencies": [
-        30
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Test Website in Chrome",
-          "description": "Test the website in Google Chrome browser.",
-          "dependencies": [],
-          "details": "Ensure all features work correctly in Chrome.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Test Website in Firefox",
-          "description": "Test the website in Mozilla Firefox browser.",
-          "dependencies": [],
-          "details": "Ensure all features work correctly in Firefox.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Test Website in Safari and Edge",
-          "description": "Test the website in Safari and Microsoft Edge browsers.",
-          "dependencies": [],
-          "details": "Ensure all features work correctly in Safari and Edge.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 34,
-      "title": "Integrate with CRM System",
-      "description": "Integrate the contact form with a CRM system for lead management.",
-      "details": "Research and implement integration with a suitable CRM system. Use APIs to send form data to the CRM.",
-      "testStrategy": "Test the integration to ensure form submissions are correctly sent to the CRM.",
-      "priority": "low",
-      "dependencies": [
-        28
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Research CRM Systems",
-          "description": "Identify and evaluate different CRM systems based on project requirements.",
-          "dependencies": [],
-          "details": "Consider factors like cost, features, and ease of integration.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Select CRM System",
-          "description": "Choose the most suitable CRM system based on the research conducted.",
-          "dependencies": [
-            1
-          ],
-          "details": "Document the reasons for choosing the selected CRM system.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Implement API Integration",
-          "description": "Set up and implement the integration using the CRM's APIs.",
-          "dependencies": [
-            2
-          ],
-          "details": "Ensure the integration is secure and follows best practices.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Test Form Submission",
-          "description": "Verify that form submissions are correctly processed by the CRM system.",
-          "dependencies": [
-            3
-          ],
-          "details": "Conduct thorough testing to ensure data accuracy and integrity.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 35,
-      "title": "Final Testing and Quality Assurance",
-      "description": "Conduct final testing to ensure the website meets all requirements.",
-      "details": "Perform thorough testing of all features and functionality. Fix any remaining bugs.",
-      "testStrategy": "Use a combination of manual and automated testing to verify the website.",
-      "priority": "high",
-      "dependencies": [
-        31,
-        32,
-        33,
-        34
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Set up testing environment",
-          "description": "Prepare the environment for both manual and automated testing.",
-          "dependencies": [],
-          "details": "Include setting up test data, configuring test tools, and ensuring all necessary resources are available.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Conduct manual testing",
-          "description": "Perform manual testing of all features to identify any issues.",
-          "dependencies": [
-            1
-          ],
-          "details": "Focus on usability, functionality, and edge cases that automated tests might miss.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Run automated tests",
-          "description": "Execute automated test scripts to verify feature functionality.",
-          "dependencies": [
-            1
-          ],
-          "details": "Ensure all automated tests are up-to-date and cover all critical paths.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Fix identified bugs",
-          "description": "Address and resolve any bugs found during testing.",
-          "dependencies": [
-            2,
-            3
-          ],
-          "details": "Prioritize bugs based on severity and impact on the overall system.",
-          "status": "pending"
-        },
-        {
-          "id": 5,
-          "title": "Verify requirements",
-          "description": "Ensure all project requirements are met and documented.",
-          "dependencies": [
-            4
-          ],
-          "details": "Conduct a final review to confirm that all features and functionalities align with the requirements.",
-          "status": "pending"
-        }
-      ]
-    },
-    {
-      "id": 36,
-      "title": "Deploy the Website",
-      "description": "Deploy the website to a production environment.",
-      "details": "Choose a hosting provider and deploy the website. Set up a domain name and configure DNS.",
-      "testStrategy": "Verify that the website is live and functioning correctly.",
-      "priority": "high",
-      "dependencies": [
-        35
-      ],
-      "status": "pending",
-      "subtasks": [
-        {
-          "id": 1,
-          "title": "Research and Select Hosting Provider",
-          "description": "Identify and choose a suitable hosting provider for the website.",
-          "dependencies": [],
-          "details": "Consider factors like cost, reliability, customer support, and scalability.",
-          "status": "pending"
-        },
-        {
-          "id": 2,
-          "title": "Set Up Hosting Account",
-          "description": "Create an account with the chosen hosting provider and configure the hosting environment.",
-          "dependencies": [
-            1
-          ],
-          "details": "Follow the provider's setup instructions and ensure all necessary configurations are completed.",
-          "status": "pending"
-        },
-        {
-          "id": 3,
-          "title": "Deploy Website Files",
-          "description": "Upload the website files to the hosting server.",
-          "dependencies": [
-            2
-          ],
-          "details": "Use FTP, SSH, or the hosting provider's file manager to upload the files.",
-          "status": "pending"
-        },
-        {
-          "id": 4,
-          "title": "Configure DNS Settings",
-          "description": "Update the DNS settings to point the domain name to the hosting server.",
-          "dependencies": [
-            3
-          ],
-          "details": "Access the domain registrar's control panel and update the DNS records accordingly.",
-          "status": "pending"
-        }
-      ]
+  "master": {
+    "tasks": [
+      {
+        "id": 14,
+        "title": "Initialize Vue.js 3 Project with Vite",
+        "description": "Set up a new Vue.js 3 project using Vite as the build tool.",
+        "details": "Use the Vite scaffold for Vue.js 3: `npm init vite@latest my-vue-app --template vue`. Install dependencies with `npm install`.",
+        "testStrategy": "Verify the project structure and that the development server runs without errors.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Initialize the project using Vite",
+            "description": "Set up a new project using Vite.",
+            "dependencies": [],
+            "details": "Run the command to create a new Vite project.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Install dependencies",
+            "description": "Install all necessary dependencies for the project.",
+            "dependencies": [
+              1
+            ],
+            "details": "Run the command to install dependencies listed in the package.json file.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "Set Up Tailwind CSS with PostCSS and Autoprefixer",
+        "description": "Integrate Tailwind CSS into the Vue.js project.",
+        "details": "Follow Tailwind CSS installation guide for Vite: `npm install -D tailwindcss postcss autoprefixer`. Initialize Tailwind CSS with `npx tailwindcss init -p`. Configure `tailwind.config.js` and `postcss.config.js`.",
+        "testStrategy": "Check that Tailwind CSS classes are working in the project.",
+        "priority": "high",
+        "dependencies": [
+          14
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install Tailwind CSS, PostCSS, and Autoprefixer",
+            "description": "Install the necessary packages using npm or yarn.",
+            "dependencies": [],
+            "details": "Run the command: npm install tailwindcss postcss autoprefixer",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Initialize Tailwind CSS",
+            "description": "Create the Tailwind CSS configuration file.",
+            "dependencies": [
+              1
+            ],
+            "details": "Run the command: npx tailwindcss init",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Configure Tailwind CSS and PostCSS",
+            "description": "Set up the configuration files for Tailwind CSS and PostCSS.",
+            "dependencies": [
+              2
+            ],
+            "details": "Update the tailwind.config.js and postcss.config.js files with the necessary configurations.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "title": "Set Up ESLint and Prettier for Code Quality",
+        "description": "Configure ESLint and Prettier for consistent code style and quality.",
+        "details": "Install ESLint and Prettier: `npm install eslint prettier eslint-plugin-vue eslint-config-prettier eslint-plugin-prettier -D`. Create `.eslintrc.js` and `.prettierrc` configuration files. Add scripts for linting and formatting in `package.json`.",
+        "testStrategy": "Run ESLint and Prettier to ensure they are properly configured.",
+        "priority": "medium",
+        "dependencies": [
+          14
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install ESLint and Prettier",
+            "description": "Install ESLint and Prettier as development dependencies.",
+            "dependencies": [],
+            "details": "Run `npm install eslint prettier --save-dev` or `yarn add eslint prettier --dev`.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Create ESLint Configuration File",
+            "description": "Generate an ESLint configuration file.",
+            "dependencies": [
+              1
+            ],
+            "details": "Run `npx eslint --init` and follow the prompts to create the configuration file.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Create Prettier Configuration File",
+            "description": "Generate a Prettier configuration file.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create a `.prettierrc` file with your preferred configuration settings.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title": "Set Up Husky and Lint-Staged for Git Hooks",
+        "description": "Configure Husky and Lint-Staged for automatic code checks before commits.",
+        "details": "Install Husky and Lint-Staged: `npm install husky lint-staged -D`. Set up Husky git hooks and configure Lint-Staged in `package.json`.",
+        "testStrategy": "Test git hooks by making a commit with linting errors.",
+        "priority": "medium",
+        "dependencies": [
+          14,
+          16
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install Husky and Lint-Staged",
+            "description": "Add Husky and Lint-Staged to the project dependencies.",
+            "dependencies": [],
+            "details": "Run `npm install husky lint-staged --save-dev` to install the packages.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Set up Husky git hooks",
+            "description": "Configure Husky to use git hooks.",
+            "dependencies": [
+              1
+            ],
+            "details": "Add the necessary scripts in the package.json to enable Husky hooks.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Configure Lint-Staged in package.json",
+            "description": "Set up Lint-Staged to run linters on staged files.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Add a lint-staged configuration in the package.json to specify which linters to run.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "title": "Create Basic Project Structure",
+        "description": "Set up the basic folder structure for the project.",
+        "details": "Create folders for `src/assets`, `src/components`, `src/views`, etc. Set up basic files like `App.vue` and `main.js`.",
+        "testStrategy": "Verify the project structure matches the requirements.",
+        "priority": "high",
+        "dependencies": [
+          14
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create Folders",
+            "description": "Create folders for assets, components, and views.",
+            "dependencies": [],
+            "details": "Ensure the folders are created in the root directory of the project.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Set Up Basic Files",
+            "description": "Set up basic files like App.vue and main.js.",
+            "dependencies": [
+              1
+            ],
+            "details": "Initialize the project with essential files required for a Vue.js application.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "title": "Implement Atomic Design System",
+        "description": "Organize UI components following the atomic design methodology.",
+        "details": "Create subfolders in `src/components` for atoms, molecules, organisms, pages, and templates. Start by implementing basic atoms like buttons and icons.",
+        "testStrategy": "Verify that components are organized correctly and render as expected.",
+        "priority": "high",
+        "dependencies": [
+          15,
+          18
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create Subfolders",
+            "description": "Create subfolders for atoms, molecules, organisms, pages, and templates.",
+            "dependencies": [],
+            "details": "Ensure each subfolder is correctly named and structured.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Implement Basic Atoms",
+            "description": "Implement basic atoms like buttons and icons.",
+            "dependencies": [
+              1
+            ],
+            "details": "Develop and test basic atom components.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Organize Components",
+            "description": "Organize components following atomic design methodology.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure components are structured according to atomic design principles.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Verify Component Organization and Rendering",
+            "description": "Verify component organization and rendering.",
+            "dependencies": [
+              3
+            ],
+            "details": "Check that all components are correctly organized and render as expected.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "title": "Develop Hero Section",
+        "description": "Create the hero section component for the homepage.",
+        "details": "Implement `MksHero` component in `src/components/organisms/sections`. Use Tailwind CSS for styling.",
+        "testStrategy": "Test the hero section in the browser to ensure it looks and behaves as expected.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksHero Component",
+            "description": "Create the MksHero component with the necessary structure and functionality.",
+            "dependencies": [],
+            "details": "Ensure the component is functional and ready for styling.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Apply Tailwind CSS Styling",
+            "description": "Use Tailwind CSS to style the MksHero component.",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure the component is visually appealing and responsive.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Test Hero Section in Browser",
+            "description": "Test the MksHero component in the browser to ensure it works as expected.",
+            "dependencies": [
+              2
+            ],
+            "details": "Check for any bugs or issues and make necessary adjustments.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "title": "Develop Products Section",
+        "description": "Create the products section component to display the product catalog.",
+        "details": "Implement `MksProductsSection` component. Use a grid layout with Tailwind CSS to display products.",
+        "testStrategy": "Verify that products are displayed correctly and the section is responsive.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksProductsSection Component",
+            "description": "Create the MksProductsSection component structure.",
+            "dependencies": [],
+            "details": "Set up the basic structure of the MksProductsSection component.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Apply Grid Layout with Tailwind CSS",
+            "description": "Style the MksProductsSection component using Tailwind CSS.",
+            "dependencies": [
+              1
+            ],
+            "details": "Use Tailwind CSS to apply a grid layout to the component.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Product Display and Responsiveness",
+            "description": "Test the MksProductsSection component for product display and responsiveness.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure the component displays products correctly and is responsive across different screen sizes.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "title": "Develop Brands Section",
+        "description": "Create the brands section to showcase partner brands.",
+        "details": "Implement `MksBrandsLogosSection` component. Use a carousel or grid layout to display brand logos.",
+        "testStrategy": "Check that brand logos are displayed correctly and the section is responsive.",
+        "priority": "medium",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksBrandsLogosSection Component",
+            "description": "Create the basic structure of the MksBrandsLogosSection component.",
+            "dependencies": [],
+            "details": "This involves setting up the component file, importing necessary libraries, and defining the basic structure.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Carousel or Grid Layout",
+            "description": "Integrate a carousel or grid layout into the MksBrandsLogosSection component.",
+            "dependencies": [
+              1
+            ],
+            "details": "Choose between a carousel or grid layout and implement it within the component.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Brand Logo Display and Responsiveness",
+            "description": "Test the display of brand logos and ensure the component is responsive.",
+            "dependencies": [
+              2
+            ],
+            "details": "Check the component on different screen sizes and ensure logos are displayed correctly.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "title": "Develop Clients Section",
+        "description": "Create the clients section to display client logos.",
+        "details": "Implement `MksClientLogosSection` component. Use a carousel or grid layout to display client logos.",
+        "testStrategy": "Verify that client logos are displayed correctly and the section is responsive.",
+        "priority": "medium",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksClientLogosSection Component",
+            "description": "Create the basic structure of the MksClientLogosSection component.",
+            "dependencies": [],
+            "details": "This involves setting up the component file, importing necessary dependencies, and creating the initial structure.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Carousel or Grid Layout",
+            "description": "Integrate a carousel or grid layout into the MksClientLogosSection component.",
+            "dependencies": [
+              1
+            ],
+            "details": "Choose between a carousel or grid layout and implement it within the component.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Client Logo Display and Responsiveness",
+            "description": "Test the display and responsiveness of client logos in the MksClientLogosSection component.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure that the logos are displayed correctly and the layout is responsive across different devices.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "title": "Develop Info Section",
+        "description": "Create the info section to provide company information.",
+        "details": "Implement `MksInfo` component. Use Tailwind CSS for styling and layout.",
+        "testStrategy": "Check that the info section displays correctly and is responsive.",
+        "priority": "medium",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksInfo Component",
+            "description": "Create the MksInfo component with the necessary structure and functionality.",
+            "dependencies": [],
+            "details": "Ensure the component is functional and meets the required specifications.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Apply Tailwind CSS for Styling",
+            "description": "Use Tailwind CSS to style the MksInfo component.",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure the component is styled according to the design guidelines.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Info Section Display and Responsiveness",
+            "description": "Test the MksInfo component to ensure it displays correctly and is responsive.",
+            "dependencies": [
+              2
+            ],
+            "details": "Check the component on different devices and screen sizes.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "title": "Develop Team Section",
+        "description": "Create the team section to showcase the company team.",
+        "details": "Implement `MksTeam` component. Use a grid layout to display team members.",
+        "testStrategy": "Verify that the team section displays correctly and is responsive.",
+        "priority": "medium",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement MksTeam Component",
+            "description": "Create the MksTeam component with basic structure and functionality.",
+            "dependencies": [],
+            "details": "This involves setting up the component file, initializing state, and handling basic props.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Use Grid Layout for Team Members",
+            "description": "Style the MksTeam component to use a grid layout for displaying team members.",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement CSS or styled-components to create a responsive grid layout.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Team Section Display and Responsiveness",
+            "description": "Test the MksTeam component to ensure it displays correctly and is responsive.",
+            "dependencies": [
+              2
+            ],
+            "details": "Use browser developer tools to check responsiveness and ensure the grid layout adapts to different screen sizes.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "title": "Implement Header Component",
+        "description": "Create the header component for the website.",
+        "details": "Implement the header component in `src/components/organisms`. Include navigation menu and company logo.",
+        "testStrategy": "Test the header component to ensure it navigates correctly and is responsive.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Header Component",
+            "description": "Create the basic structure of the header component.",
+            "dependencies": [],
+            "details": "Include HTML and CSS for the header component.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Navigation Menu and Company Logo",
+            "description": "Include navigation menu items and company logo in the header.",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure the navigation menu is functional and the logo is displayed correctly.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Test Header Component",
+            "description": "Test the header component for navigation and responsiveness.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure the header works on different screen sizes and devices.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "title": "Implement Footer Component",
+        "description": "Create the footer component for the website.",
+        "details": "Implement the footer component in `src/components/organisms`. Include contact information and links.",
+        "testStrategy": "Verify that the footer displays correctly and is responsive.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Footer Component",
+            "description": "Create the basic structure of the footer component.",
+            "dependencies": [],
+            "details": "Use HTML and CSS to design the footer layout.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Contact Information and Links",
+            "description": "Include contact details and relevant links in the footer.",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure the contact information is accurate and links are functional.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Test Footer Display and Responsiveness",
+            "description": "Verify that the footer displays correctly and is responsive.",
+            "dependencies": [
+              2
+            ],
+            "details": "Test on different devices and screen sizes.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Implement Contact Form",
+        "description": "Create a contact form for users to request commercial proposals.",
+        "details": "Implement a form component in `src/components/molecules`. Use Vue.js for form handling and validation.",
+        "testStrategy": "Test the form to ensure it validates inputs and submits data correctly.",
+        "priority": "high",
+        "dependencies": [
+          19
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create Form Component",
+            "description": "Develop the basic structure of the form component.",
+            "dependencies": [],
+            "details": "Use Vue.js to create the form component with necessary input fields.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Implement Form Handling",
+            "description": "Set up form handling using Vue.js.",
+            "dependencies": [
+              1
+            ],
+            "details": "Bind input fields to Vue.js data properties and handle form submission.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Add Form Validation",
+            "description": "Implement validation rules for the form fields.",
+            "dependencies": [
+              2
+            ],
+            "details": "Use Vue.js validation libraries or custom validation to ensure data integrity.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Test Form Functionality",
+            "description": "Write tests to verify form validation and submission.",
+            "dependencies": [
+              3
+            ],
+            "details": "Create unit tests to check if validation rules are applied correctly and form data is submitted properly.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "title": "Implement Page Layout",
+        "description": "Create a layout component for the website pages.",
+        "details": "Implement `PageLayout.vue` in `src/components/templates`. Include slots for header, main content, and footer.",
+        "testStrategy": "Verify that the layout component works correctly with different pages.",
+        "priority": "high",
+        "dependencies": [
+          26,
+          27
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create PageLayout.vue",
+            "description": "Implement the basic structure of the PageLayout.vue component.",
+            "dependencies": [],
+            "details": "Ensure the component is set up with the necessary imports and basic structure.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Slots for Header, Main Content, and Footer",
+            "description": "Include slots in PageLayout.vue for header, main content, and footer.",
+            "dependencies": [
+              1
+            ],
+            "details": "Define slots for header, main content, and footer within the PageLayout.vue component.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify Layout Component with Different Pages",
+            "description": "Test the PageLayout.vue component with various pages to ensure it works correctly.",
+            "dependencies": [
+              2
+            ],
+            "details": "Create different pages and use the PageLayout.vue component to verify its functionality.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "title": "Implement Home Page",
+        "description": "Create the homepage component using the layout and sections.",
+        "details": "Implement `HomePage.vue` in `src/components/pages`. Use the layout component and include all sections.",
+        "testStrategy": "Test the homepage to ensure all sections display correctly.",
+        "priority": "high",
+        "dependencies": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          29
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create HomePage.vue file",
+            "description": "Set up the basic structure for the HomePage.vue component.",
+            "dependencies": [],
+            "details": "Initialize the Vue component with basic template, script, and style sections.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Integrate layout component",
+            "description": "Use the layout component within HomePage.vue.",
+            "dependencies": [
+              1
+            ],
+            "details": "Import and include the layout component in the HomePage.vue template.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Add all sections to HomePage.vue",
+            "description": "Include all necessary sections in the HomePage.vue component.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure all required sections are present and correctly structured within the template.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Test homepage display",
+            "description": "Run the application to test the display of the homepage.",
+            "dependencies": [
+              3
+            ],
+            "details": "Verify that the homepage loads correctly in the browser.",
+            "status": "pending"
+          },
+          {
+            "id": 5,
+            "title": "Verify all sections display correctly",
+            "description": "Check that all sections are displayed as expected.",
+            "dependencies": [
+              4
+            ],
+            "details": "Ensure each section is rendered correctly and visually consistent.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "title": "Implement SEO Optimization",
+        "description": "Optimize the website for search engines.",
+        "details": "Use Vue meta information to set page titles, descriptions, and other SEO tags. Ensure all images have alt text.",
+        "testStrategy": "Use SEO tools to verify that the website is optimized.",
+        "priority": "medium",
+        "dependencies": [
+          30
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Vue Meta Information",
+            "description": "Add meta tags for SEO using Vue Meta plugin.",
+            "dependencies": [],
+            "details": "Install Vue Meta plugin and configure meta tags for each page.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Add Alt Text to Images",
+            "description": "Ensure all images have descriptive alt text.",
+            "dependencies": [],
+            "details": "Review all images and add appropriate alt text for accessibility and SEO.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Verify SEO Optimization",
+            "description": "Use SEO tools to verify optimization.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Utilize tools like Google Lighthouse, SEMrush, or Ahrefs to check SEO performance.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "title": "Implement Performance Optimization",
+        "description": "Optimize the website for performance.",
+        "details": "Use Vite's optimization features, lazy load images, and minify CSS and JavaScript.",
+        "testStrategy": "Use performance tools to verify that the website loads quickly.",
+        "priority": "medium",
+        "dependencies": [
+          30
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Enable Vite's Optimization Features",
+            "description": "Configure Vite to use its built-in optimization features.",
+            "dependencies": [],
+            "details": "Update Vite configuration to enable code splitting, tree shaking, and other optimizations.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Implement Lazy Loading for Images",
+            "description": "Modify the codebase to lazy load images.",
+            "dependencies": [],
+            "details": "Use the 'loading=lazy' attribute or a JavaScript library to lazy load images.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Minify CSS and JavaScript",
+            "description": "Minify all CSS and JavaScript files.",
+            "dependencies": [],
+            "details": "Use a minification tool or Vite's built-in minification to reduce file sizes.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "title": "Test Cross-Browser Compatibility",
+        "description": "Ensure the website works across different browsers.",
+        "details": "Test the website in Chrome, Firefox, Safari, and Edge. Fix any compatibility issues.",
+        "testStrategy": "Use browser testing tools to verify compatibility.",
+        "priority": "medium",
+        "dependencies": [
+          30
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Test Website in Chrome",
+            "description": "Test the website in Google Chrome browser.",
+            "dependencies": [],
+            "details": "Ensure all features work correctly in Chrome.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Test Website in Firefox",
+            "description": "Test the website in Mozilla Firefox browser.",
+            "dependencies": [],
+            "details": "Ensure all features work correctly in Firefox.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Test Website in Safari and Edge",
+            "description": "Test the website in Safari and Microsoft Edge browsers.",
+            "dependencies": [],
+            "details": "Ensure all features work correctly in Safari and Edge.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "title": "Integrate with CRM System",
+        "description": "Integrate the contact form with a CRM system for lead management.",
+        "details": "Research and implement integration with a suitable CRM system. Use APIs to send form data to the CRM.",
+        "testStrategy": "Test the integration to ensure form submissions are correctly sent to the CRM.",
+        "priority": "low",
+        "dependencies": [
+          28
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Research CRM Systems",
+            "description": "Identify and evaluate different CRM systems based on project requirements.",
+            "dependencies": [],
+            "details": "Consider factors like cost, features, and ease of integration.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Select CRM System",
+            "description": "Choose the most suitable CRM system based on the research conducted.",
+            "dependencies": [
+              1
+            ],
+            "details": "Document the reasons for choosing the selected CRM system.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Implement API Integration",
+            "description": "Set up and implement the integration using the CRM's APIs.",
+            "dependencies": [
+              2
+            ],
+            "details": "Ensure the integration is secure and follows best practices.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Test Form Submission",
+            "description": "Verify that form submissions are correctly processed by the CRM system.",
+            "dependencies": [
+              3
+            ],
+            "details": "Conduct thorough testing to ensure data accuracy and integrity.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "title": "Final Testing and Quality Assurance",
+        "description": "Conduct final testing to ensure the website meets all requirements.",
+        "details": "Perform thorough testing of all features and functionality. Fix any remaining bugs.",
+        "testStrategy": "Use a combination of manual and automated testing to verify the website.",
+        "priority": "high",
+        "dependencies": [
+          31,
+          32,
+          33,
+          34
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up testing environment",
+            "description": "Prepare the environment for both manual and automated testing.",
+            "dependencies": [],
+            "details": "Include setting up test data, configuring test tools, and ensuring all necessary resources are available.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Conduct manual testing",
+            "description": "Perform manual testing of all features to identify any issues.",
+            "dependencies": [
+              1
+            ],
+            "details": "Focus on usability, functionality, and edge cases that automated tests might miss.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Run automated tests",
+            "description": "Execute automated test scripts to verify feature functionality.",
+            "dependencies": [
+              1
+            ],
+            "details": "Ensure all automated tests are up-to-date and cover all critical paths.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Fix identified bugs",
+            "description": "Address and resolve any bugs found during testing.",
+            "dependencies": [
+              2,
+              3
+            ],
+            "details": "Prioritize bugs based on severity and impact on the overall system.",
+            "status": "pending"
+          },
+          {
+            "id": 5,
+            "title": "Verify requirements",
+            "description": "Ensure all project requirements are met and documented.",
+            "dependencies": [
+              4
+            ],
+            "details": "Conduct a final review to confirm that all features and functionalities align with the requirements.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "title": "Deploy the Website",
+        "description": "Deploy the website to a production environment.",
+        "details": "Choose a hosting provider and deploy the website. Set up a domain name and configure DNS.",
+        "testStrategy": "Verify that the website is live and functioning correctly.",
+        "priority": "high",
+        "dependencies": [
+          35
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Research and Select Hosting Provider",
+            "description": "Identify and choose a suitable hosting provider for the website.",
+            "dependencies": [],
+            "details": "Consider factors like cost, reliability, customer support, and scalability.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Set Up Hosting Account",
+            "description": "Create an account with the chosen hosting provider and configure the hosting environment.",
+            "dependencies": [
+              1
+            ],
+            "details": "Follow the provider's setup instructions and ensure all necessary configurations are completed.",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Deploy Website Files",
+            "description": "Upload the website files to the hosting server.",
+            "dependencies": [
+              2
+            ],
+            "details": "Use FTP, SSH, or the hosting provider's file manager to upload the files.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Configure DNS Settings",
+            "description": "Update the DNS settings to point the domain name to the hosting server.",
+            "dependencies": [
+              3
+            ],
+            "details": "Access the domain registrar's control panel and update the DNS records accordingly.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "title": "Implement Responsive Design and Cross-Browser Compatibility",
+        "description": "Implement full website responsiveness for correct display on mobile devices, tablets, and desktops, including adapting layouts, images, fonts, and controls, and ensuring cross-browser compatibility.",
+        "details": "1.  **Viewport Configuration:** Set the viewport meta tag in the HTML to control scaling and dimensions on different devices.\n2.  **CSS Media Queries:** Implement CSS media queries to apply different styles based on screen size and device type. Define breakpoints for mobile, tablet, and desktop.\n3.  **Flexible Layouts:** Use flexible CSS layouts such as Flexbox or Grid to create layouts that adapt to different screen sizes.\n4.  **Image Optimization:** Optimize images for different screen resolutions using the `<picture>` element or `srcset` attribute in `<img>` tags. Use responsive image techniques to load appropriate image sizes based on the device.\n5.  **Font Scaling:** Use relative units (em, rem, vw, vh) for font sizes to ensure text scales appropriately on different devices.\n6.  **Touch-Friendly Controls:** Ensure that interactive elements (buttons, links, forms) are touch-friendly by providing sufficient spacing and using appropriate sizes.\n7.  **Cross-Browser Testing:** Test the website on multiple browsers (Chrome, Firefox, Safari, Edge) and devices to ensure compatibility. Use browser developer tools to identify and fix any layout or rendering issues.\n8.  **Accessibility:** Ensure the responsive design is accessible by following accessibility guidelines (WCAG). Use semantic HTML and provide alternative text for images.",
+        "testStrategy": "1.  **Manual Testing:** Manually test the website on different devices (mobile phones, tablets, desktops) and browsers to verify that the layout, images, fonts, and controls are displayed correctly.\n2.  **Browser Developer Tools:** Use browser developer tools (e.g., Chrome DevTools) to simulate different screen sizes and device types. Inspect the CSS and HTML to ensure that the correct styles are being applied.\n3.  **Automated Testing:** Use automated testing tools (e.g., Selenium, Cypress) to test the responsive design. Write tests to verify that the layout adapts correctly to different screen sizes and that all elements are displayed as expected.\n4.  **Cross-Browser Testing Tools:** Use cross-browser testing tools (e.g., BrowserStack, Sauce Labs) to test the website on different browsers and operating systems.\n5.  **Performance Testing:** Use performance testing tools (e.g., Google PageSpeed Insights, Lighthouse) to measure the performance of the responsive design. Optimize images and CSS to improve loading times on mobile devices.",
+        "status": "pending",
+        "dependencies": [
+          30,
+          33
+        ],
+        "priority": "medium",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Viewport Configuration and Initial CSS Media Queries",
+            "description": "Set the viewport meta tag in the HTML and implement basic CSS media queries for mobile, tablet, and desktop breakpoints.",
+            "dependencies": [],
+            "details": "Configure the viewport meta tag to control scaling and dimensions. Define initial breakpoints in CSS using media queries for common device sizes (mobile, tablet, desktop).",
+            "status": "in-progress",
+            "testStrategy": "Verify the viewport meta tag is correctly set in the HTML. Manually resize the browser window to trigger different media queries and confirm that basic styles are applied correctly at each breakpoint."
+          },
+          {
+            "id": 2,
+            "title": "Develop Flexible Layouts with Flexbox or Grid",
+            "description": "Implement flexible CSS layouts using Flexbox or Grid to ensure content adapts to different screen sizes.",
+            "dependencies": [
+              1
+            ],
+            "details": "Choose either Flexbox or Grid (or a combination) to create flexible layouts for key website sections. Ensure that elements reflow and resize appropriately as the screen size changes.",
+            "status": "pending",
+            "testStrategy": "Resize the browser window and inspect the layout to ensure elements reflow and resize correctly. Test on different devices (mobile, tablet, desktop) to verify layout responsiveness."
+          },
+          {
+            "id": 3,
+            "title": "Optimize Images for Different Screen Resolutions",
+            "description": "Optimize images using the `<picture>` element or `srcset` attribute in `<img>` tags to load appropriate image sizes based on the device.",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement responsive image techniques using the `<picture>` element or `srcset` attribute. Create multiple image sizes for different screen resolutions and pixel densities. Optimize image file sizes to improve loading times.",
+            "status": "pending",
+            "testStrategy": "Use browser developer tools to inspect the images being loaded on different devices and screen sizes. Verify that the appropriate image size is being loaded for each device. Measure image loading times to ensure optimization is effective."
+          },
+          {
+            "id": 4,
+            "title": "Implement Font Scaling and Touch-Friendly Controls",
+            "description": "Use relative units for font sizes and ensure interactive elements are touch-friendly.",
+            "dependencies": [
+              2
+            ],
+            "details": "Use relative units (em, rem, vw, vh) for font sizes to ensure text scales appropriately. Increase the size and spacing of interactive elements (buttons, links, forms) to make them touch-friendly.",
+            "status": "pending",
+            "testStrategy": "Resize the browser window and verify that font sizes scale appropriately. Test interactive elements on touch devices to ensure they are easy to tap and use."
+          },
+          {
+            "id": 5,
+            "title": "Perform Cross-Browser and Device Testing and Accessibility Audit",
+            "description": "Test the website on multiple browsers and devices, and conduct an accessibility audit to ensure compliance with WCAG guidelines.",
+            "dependencies": [
+              3,
+              4
+            ],
+            "details": "Test the website on Chrome, Firefox, Safari, and Edge on different devices (mobile, tablet, desktop). Use browser developer tools to identify and fix any layout or rendering issues. Conduct an accessibility audit using tools like WAVE or Axe to identify and fix accessibility issues. Ensure semantic HTML is used and alternative text is provided for images.",
+            "status": "pending",
+            "testStrategy": "Manually test the website on different browsers and devices. Use browser developer tools to identify and fix layout and rendering issues. Run an accessibility audit using automated tools and manually verify accessibility guidelines are followed."
+          },
+          {
+            "id": 6,
+            "title": "Добавить мобильное меню 'гамбургер'",
+            "description": "Реализовать компонент мобильного меню 'гамбургер' для адаптивной навигации на небольших экранах.",
+            "details": "",
+            "status": "pending",
+            "dependencies": [
+              "37.2"
+            ],
+            "parentTaskId": 37
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-06-20T18:03:20.636Z",
+      "updated": "2025-06-21T14:51:01.434Z",
+      "description": "Tasks for master context"
     }
-  ],
-  "metadata": {
-    "created": "2025-06-20T18:03:20.636Z",
-    "updated": "2025-06-20T18:24:05.611Z",
-    "description": "Tasks for master context"
   }
 }

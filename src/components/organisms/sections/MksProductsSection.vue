@@ -113,7 +113,7 @@ const commercialOffer = {
       <div class="mt-37.5! text-center">
         <a
           :href="commercialOffer.link"
-          class="inline-flex items-center text-white text-xl font-semibold underline"
+          class="inline-flex items-center text-white text-xl font-semibold underline px-5 py-4 rounded-xl transition-all duration-200 hover:bg-black/20 active:bg-black/40 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner"
         >
           <!-- Placeholder for PDF icon -->
           <div class="w-27.5 h-27.5 mr-10! flex items-center justify-center">

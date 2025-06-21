@@ -57,7 +57,7 @@ const sectionId = computed(() => {
 
   font-size: 84px;
   line-height: 90px;
-  font-weight: 900;
+  font-weight: 800;
   text-align: center;
 
   margin: 0 4px;

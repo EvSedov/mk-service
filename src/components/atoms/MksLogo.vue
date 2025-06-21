@@ -12,8 +12,8 @@
 }
 
 .logo img {
-  width: 180px;
-  height: 88px;
+  width: 200px;
+  height: auto;
   margin-right: 8px;
 }
 </style>

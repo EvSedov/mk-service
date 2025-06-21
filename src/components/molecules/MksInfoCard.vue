@@ -47,7 +47,7 @@ const downloadRequisites = () => {
     </div>
 
     <button
-      class="w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 mt-4"
+      class="w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner mt-4"
       @click="downloadRequisites"
     >
       {{ companyData.button.text }}

@@ -4,7 +4,7 @@
       "command": "npx",
       "args": ["-y", "--package=task-master-ai", "task-master-ai"],
       "env": {
-        "OPENROUTER_API_KEY": "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"
+        "GOOGLE_API_KEY": "AIzaSyBkrpB_6rdAfex44wcF24CEUBLAu9x5oN0"
       }
     }
   }

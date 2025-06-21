@@ -1,7 +1,8 @@
-@import './base.css';
 @import 'tailwindcss';
+@import './base.css';
 
 body {
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -19,16 +20,24 @@ body {
   margin-right: auto;
 }
 
-a,
 .green {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
-  padding: 3px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+/* Стили для планшетов (md breakpoint - 768px и выше) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
   }
+  /* Добавьте здесь другие стили для планшетов */
+}
+
+/* Стили для десктопов (lg breakpoint - 1024px и выше) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+  /* Добавьте здесь другие стили для десктопов */
 }

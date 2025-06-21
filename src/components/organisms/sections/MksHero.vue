@@ -11,20 +11,20 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
     <div class="hero-bg container">
       <div class="hero__content flex items-start justify-between w-full">
         <div class="flex flex-col gap-10.5 max-w-[50%]">
-          <h2 class="m-0 p-0 text-[76px]/[1.1] text-white font-black!">
+          <h2 class="m-0 p-0 text-[76px]/[1.1] text-white font-extrabold">
             Ваш партнер <br />
             по
-            <span class="font-black! text-[#FFD13D]">снабжению</span>
+            <span class="font-extrabold text-[#FFD13D]">снабжению</span>
           </h2>
-          <p class="text-white text-xl/tight w-[394px] font-bold!">
+          <p class="text-white text-xl/tight w-[394px] font-bold">
             Оперативные поставки расходных материалов в Новосибирске
           </p>
-          <p class="text-white font-normal! w-[318px] text-base/tight">
+          <p class="text-white font-normal w-[318px] text-base/tight">
             Для монолитчиков, каменщиков, отделочников и других специалистов
           </p>
           <MksButton
             label="Контакты"
-            class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold! rounded-xl"
+            class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold rounded-xl"
           />
         </div>
 
