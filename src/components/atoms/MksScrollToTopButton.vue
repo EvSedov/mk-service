@@ -46,6 +46,4 @@ onUnmounted(() => {
   </button>
 </template>
 
-<style scoped>
-/* Дополнительные стили, если нужны, но Tailwind CSS должен справиться */
-</style>
+<style scoped></style>

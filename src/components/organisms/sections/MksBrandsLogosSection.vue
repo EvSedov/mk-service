@@ -74,12 +74,18 @@ const brands = [
 const shuffledBrandsTop = ref([
   ...shuffleArray(brands),
   ...shuffleArray(brands),
+  ...shuffleArray(brands),
+  ...shuffleArray(brands),
 ]);
 const shuffledBrandsMiddle = ref([
   ...shuffleArray(brands),
   ...shuffleArray(brands),
+  ...shuffleArray(brands),
+  ...shuffleArray(brands),
 ]);
 const shuffledBrandsBottom = ref([
+  ...shuffleArray(brands),
+  ...shuffleArray(brands),
   ...shuffleArray(brands),
   ...shuffleArray(brands),
 ]);
@@ -90,7 +96,7 @@ const shuffledBrandsBottom = ref([
 
 <template>
   <section class="bg-white" style="padding-top: 130px; padding-bottom: 130px">
-    <div class="container">
+    <div class="">
       <!-- Верхняя строка: слева направо -->
       <div class="scrolling-row top-row" style="margin-bottom: 130px">
         <div class="logos-container">

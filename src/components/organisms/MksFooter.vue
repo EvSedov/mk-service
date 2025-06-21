@@ -119,7 +119,7 @@ const scrollToSection = (event: Event, targetId: string) => {
               <li v-for="link in footerData.navigation" :key="link.id">
                 <a
                   :href="`#${link.id}`"
-                  class="text-white! font-bold! text-xl/tight! md:text-2xl! hover:text-yellow-400! transition-colors! duration-200!"
+                  class="text-white font-bold text-xl/tight md:text-2xl hover:text-yellow-400 active:text-yellow-500 transition-colors! duration-200!"
                   @click="scrollToSection($event, link.id)"
                 >
                   {{ link.label }}
