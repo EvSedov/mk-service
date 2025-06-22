@@ -9,6 +9,11 @@ const scrollToSection = (event: Event, targetId: string) => {
   // Специальный случай для "Главная" - прокрутка в начало страницы
   if (targetId === 'main') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (closeSheet) {
+      closeSheet();
+    }
+
     return;
   }
 

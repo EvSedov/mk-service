@@ -101,8 +101,12 @@ const commercialOffer = {
   <section class="products py-20 bg-gray-800 bg-opacity-75 overflow-hidden">
     <div class="bg-filter"></div>
     <div class="relative z-10 container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-20">
-        <div v-for="(product, index) in products" :key="index">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-20">
+        <div
+          v-for="(product, index) in products"
+          :key="index"
+          class="py-4 md:py-0"
+        >
           <MksProductItem
             :description="product.description"
             :image="product.img"
