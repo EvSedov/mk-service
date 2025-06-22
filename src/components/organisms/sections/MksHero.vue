@@ -5,30 +5,37 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 </script>
 
 <template>
-  <section class="hero">
+  <section class="hero max-h-[770px]">
     <div class="bg-filter"></div>
     <MksHeader />
-    <div class="hero-bg container">
-      <div class="hero__content flex items-start justify-between w-full">
-        <div class="flex flex-col gap-10.5 max-w-[50%]">
-          <h2 class="m-0 p-0 text-[76px]/[1.1] text-white font-extrabold">
+    <div class="hero-bg container px-4">
+      <div
+        class="hero__content flex items-center justify-center 2xl:items-start lg:justify-between w-full"
+      >
+        <div class="flex flex-col gap-10.5 lg:max-w-[50%] px-4">
+          <h2
+            class="m-0 p-0 text-[36px]/[1.1] md:text-[46px]/[1.1] lg:text-[56px]/[1.1] xl:text-[76px]/[1.1] text-white font-bold md:font-extrabold text-wrap"
+          >
             Ваш партнер <br />
             по
             <span class="font-extrabold text-[#FFD13D]">снабжению</span>
           </h2>
-          <p class="text-white text-xl/tight w-[394px] font-bold">
+          <p class="text-white text-xl/tight max-w-[394px] font-bold text-wrap">
             Оперативные поставки расходных материалов в Новосибирске
           </p>
-          <p class="text-white font-normal w-[318px] text-base/tight">
+          <p
+            class="text-white font-normal max-w-[318px] text-base/tight text-wrap"
+          >
             Для монолитчиков, каменщиков, отделочников и других специалистов
           </p>
           <MksButton
             label="Контакты"
-            class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold rounded-xl"
+            class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold rounded-xl hidden 2xl:block"
           />
         </div>
-
-        <StatisticsCard />
+        <div class="hidden lg:block">
+          <StatisticsCard />
+        </div>
       </div>
     </div>
   </section>
@@ -37,7 +44,6 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 <style scoped>
 .hero {
   position: relative;
-  height: 770px;
   background-color: rgba(56, 70, 81, 0.5);
   background-image: url('@/assets/images/bg-header-hero-80.jpg');
   background-size: cover;
@@ -64,7 +70,7 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 .hero__content {
   position: relative;
   z-index: 20;
-  padding-top: 48px;
+  padding: 48px 0;
   margin: auto;
 }
 </style>

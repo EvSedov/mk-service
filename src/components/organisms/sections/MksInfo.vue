@@ -18,9 +18,7 @@ const map = shallowRef<null | YMap>(null);
     class="info w-full flex flex-col xl:flex-row xl:items-center xl:justify-end overflow-hidden bg-cover bg-center inset-0"
   >
     <!-- Интерактивная карта Яндекс.Карты -->
-    <div
-      class="w-full h-[675px] sm:h-[900px] md:h-[800px] lg:h-[675px] inset-0 p-4 md:p-0"
-    >
+    <div class="w-full h-[475px] sm:h-[900px] md:h-[675px] inset-0 p-4 md:p-0">
       <YandexMap
         v-model="map"
         :settings="{
