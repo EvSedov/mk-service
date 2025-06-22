@@ -27,7 +27,7 @@ const downloadRequisites = () => {
 
 <template>
   <div
-    class="bg-[#F7D156] p-12.5 rounded-2xl shadow-xl flex flex-col items-start space-y-4 max-w-sm mx-auto md:max-w-md lg:max-w-lg"
+    class="bg-[#F7D156] p-6 md:p-12.5 md:rounded-2xl shadow-xl flex flex-col items-start space-y-4 w-full h-full mx-auto md:max-w-md lg:max-w-lg"
   >
     <h2 class="text-[22px]! font-black! text-[#333333] mb-8!">
       {{ companyData.name }}
@@ -51,7 +51,7 @@ const downloadRequisites = () => {
     </div>
 
     <button
-      class="w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner mt-4"
+      class="max-w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner mt-4"
       @click="downloadRequisites"
     >
       {{ companyData.button.text }}

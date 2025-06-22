@@ -13,10 +13,12 @@ const sectionId = computed(() => {
 
 <template>
   <section :id="sectionId" class="section-title">
-    <div class="container w-full">
+    <div class="container w-full px-4">
       <div class="section-title__title-wrapper">
-        <div class="section-title__line"></div>
-        <h2 class="section-title__title">{{ title }}</h2>
+        <div class="section-title__line hidden md:h-3 md:block lg:h-5.5"></div>
+        <h2 class="section-title__title text-5xl/tight lg:text-[84px]/[90px]">
+          {{ title }}
+        </h2>
       </div>
       <p class="section-title__text">{{ text }}</p>
     </div>
@@ -46,7 +48,6 @@ const sectionId = computed(() => {
   left: 0;
   right: 0;
   top: 55%;
-  height: 22px;
   background-color: white;
   z-index: 10;
   transform: translateY(-50%);
@@ -54,9 +55,6 @@ const sectionId = computed(() => {
 
 .section-title__title {
   color: #14213d;
-
-  font-size: 84px;
-  line-height: 90px;
   font-weight: 800;
   text-align: center;
 

@@ -1,34 +1,64 @@
-<script setup>
+<script setup lang="ts">
 import MksInfoCard from '@/components/molecules/MksInfoCard.vue';
+import { shallowRef } from 'vue';
+import type { YMap } from '@yandex/ymaps3-types';
+import {
+  YandexMap,
+  YandexMapDefaultSchemeLayer,
+  YandexMapDefaultFeaturesLayer,
+  YandexMapDefaultMarker,
+} from 'vue-yandex-maps';
 
-// Обратите внимание:
-// 1. Замените '/path/to/your/map-background-image.png' на реальный путь к вашей фоновой картинке карты.
-// 2. В будущем этот компонент может быть расширен для интеграции с интерактивными картами (например, Яндекс.Карты)
-//    вместо статического фонового изображения.
+// Можно использовать для различных преобразований
+const map = shallowRef<null | YMap>(null);
 </script>
 
 <template>
   <section
-    class="info w-full flex items-center justify-end overflow-hidden bg-cover bg-center inset-0"
+    class="info w-full flex flex-col xl:flex-row xl:items-center xl:justify-end overflow-hidden bg-cover bg-center inset-0"
   >
-    <!-- Фоновое изображение карты как div -->
+    <!-- Интерактивная карта Яндекс.Карты -->
     <div
-      class="container mx-auto flex items-center justify-center xl:justify-end pt-10 pb-12.5"
-      role="img"
-      aria-label="Карта с расположением компании"
+      class="w-full h-[675px] sm:h-[900px] md:h-[800px] lg:h-[675px] inset-0 p-4 md:p-0"
     >
-      <!-- Информационная карточка -->
-      <div
-        class="z-10 p-4 md:p-8 w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto md:mr-26!"
+      <YandexMap
+        v-model="map"
+        :settings="{
+          location: {
+            center: [82.912884, 55.032433],
+            zoom: 15,
+          },
+        }"
+        width="100%"
+        height="100%"
       >
-        <MksInfoCard />
-      </div>
+        <YandexMapDefaultSchemeLayer />
+        <YandexMapDefaultFeaturesLayer />
+        <YandexMapDefaultMarker
+          :settings="{ coordinates: [82.912884, 55.032433] }"
+        />
+      </YandexMap>
+    </div>
+
+    <!-- Информационная карточка (absolute for large screens) -->
+
+    <div
+      class="hidden xl:flex xl:justify-center absolute z-10 p-8 w-full xl:max-w-lg xl:m-26!"
+    >
+      <MksInfoCard />
+    </div>
+
+    <!-- Информационная карточка (for small screens, below map) -->
+    <div
+      class="xl:hidden w-full flex justify-center items-center md:py-8 bg-white"
+    >
+      <MksInfoCard />
     </div>
   </section>
 </template>
 
 <style scoped>
 .info {
-  background-image: url('/src/assets/images/bg-map.jpg');
+  position: relative;
 }
 </style>
