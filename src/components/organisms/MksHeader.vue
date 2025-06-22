@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MksLogo from '@/components/atoms/MksLogo.vue';
 import IconPhone from '@/components/atoms/icons/IconPhone.vue';
+import MobileMenuToggle from '../molecules/MobileMenuToggle.vue';
 
 const scrollToSection = (event: Event, targetId: string) => {
   event.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -22,12 +23,12 @@ const scrollToSection = (event: Event, targetId: string) => {
 <template>
   <section class="header">
     <div
-      class="header__content flex items-center justify-between container py-8"
+      class="header__content flex items-center xl:justify-between container py-8 px-6"
     >
       <div class="header__logo">
         <MksLogo />
       </div>
-      <nav class="header__nav">
+      <nav class="header__nav hidden xl:flex">
         <ul class="flex space-x-4">
           <li>
             <a
@@ -71,16 +72,21 @@ const scrollToSection = (event: Event, targetId: string) => {
           </li>
         </ul>
       </nav>
-      <div class="header__contact text-white">
+      <div
+        class="header__contact text-white ml-auto! xl:ml-0! hidden! md:flex!"
+      >
         <span class="font-light text-lg">Отдел продаж</span>
         <a
           class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 hover:bg-black/20 px-2 py-1 rounded transition-colors duration-200"
           href="tel:+79137400363"
         >
           <IconPhone />
-          <span class="font-bold text-xl">+7 (913) 740-03-63</span>
+          <span class="font-bold text-xl text-nowrap">+7 (913) 740-03-63</span>
         </a>
         <span class="font-light text-lg">пн-пт 09:00-17:00 (НСК)</span>
+      </div>
+      <div class="ml-auto! md:ml-10! xl:hidden">
+        <MobileMenuToggle />
       </div>
     </div>
   </section>
