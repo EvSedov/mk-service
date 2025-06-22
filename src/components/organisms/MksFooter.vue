@@ -22,7 +22,7 @@ const footerData = ref({
       {
         name: 'Telegram',
         component: markRaw(IconTelegram), // Оборачиваем компонент в markRaw
-        url: 'https://t.me/your_telegram_channel', // Замените на реальную ссылку
+        url: 'https://t.me/Mikhail_MKCC', // Обновленная ссылка на Telegram
       },
     ],
   },
@@ -36,8 +36,7 @@ const footerData = ref({
   copyright: '© 2025 ООО «МК-СЕРВИС.СНАБЖЕНИЕ»',
   designer: {
     text: 'Дизайн',
-    // logo: { src: '/src/assets/images/logo-ivankin.png', alt: 'IVANKIN' }, // Удалено, т.к. используется компонент IvankinLogo
-    url: 'https://ivankin.com', // Замените на реальную ссылку
+    url: 'https://t.me/mirvladIV', // Обновленная ссылка на дизайнера
   },
 });
 
@@ -98,7 +97,7 @@ const scrollToSection = (event: Event, targetId: string) => {
                 :href="messenger.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="block hover:opacity-80 transition-opacity duration-200"
+                class="block hover:opacity-80 active:opacity-60! transition-opacity duration-200"
               >
                 <component :is="messenger.component" class="w-9 h-9" />
               </a>
@@ -139,7 +138,7 @@ const scrollToSection = (event: Event, targetId: string) => {
               :href="footerData.designer.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-[#C9C9C9]! hover:opacity-80! transition-opacity! duration-200!"
+              class="flex items-center gap-2 text-[#C9C9C9]! hover:opacity-80! active:opacity-60! transition-opacity! duration-200!"
             >
               <span>{{ footerData.designer.text }}</span>
               <IvankinLogo class="h-4 md:h-5" />

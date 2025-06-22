@@ -36,7 +36,7 @@ const sectionId = computed(() => {
   position: relative;
   margin: 0 auto;
 
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   width: fit-content;
   text-align: center;
 }
