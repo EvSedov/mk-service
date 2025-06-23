@@ -15,12 +15,12 @@ const sectionId = computed(() => {
   <section :id="sectionId" class="section-title">
     <div class="container w-full px-4">
       <div class="section-title__title-wrapper">
-        <div class="section-title__line hidden md:h-3 md:block lg:h-5.5"></div>
+        <div class="section-title__line h-3 lg:h-5.5"></div>
         <h2 class="section-title__title text-5xl/tight lg:text-[84px]/[90px]">
           {{ title }}
         </h2>
       </div>
-      <p class="section-title__text">{{ text }}</p>
+      <p class="section-title__text text-[#14213d]">{{ text }}</p>
     </div>
   </section>
 </template>
@@ -65,9 +65,7 @@ const sectionId = computed(() => {
 }
 
 .section-title__text {
-  color: #14213d;
   font-size: 20px;
-
   line-height: 24px;
   font-weight: bold;
   text-align: center;

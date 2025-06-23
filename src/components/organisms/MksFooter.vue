@@ -16,13 +16,15 @@ const footerData = ref({
     messengers: [
       {
         name: 'WhatsApp',
-        component: markRaw(IconWhatsApp), // Оборачиваем компонент в markRaw
+        component: markRaw(IconWhatsApp),
         url: 'https://wa.me/79137400363',
+        class: 'w-9 h-9',
       },
       {
         name: 'Telegram',
-        component: markRaw(IconTelegram), // Оборачиваем компонент в markRaw
-        url: 'https://t.me/Mikhail_MKCC', // Обновленная ссылка на Telegram
+        component: markRaw(IconTelegram),
+        url: 'https://t.me/Mikhail_MKCC',
+        class: 'w-10 h-10',
       },
     ],
   },
@@ -99,7 +101,7 @@ const scrollToSection = (event: Event, targetId: string) => {
                 rel="noopener noreferrer"
                 class="block hover:opacity-80 active:opacity-60! transition-opacity duration-200"
               >
-                <component :is="messenger.component" class="w-9 h-9" />
+                <component :is="messenger.component" :class="messenger.class" />
               </a>
             </div>
           </div>
@@ -138,7 +140,7 @@ const scrollToSection = (event: Event, targetId: string) => {
               :href="footerData.designer.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-[#C9C9C9]! hover:opacity-80! active:opacity-60! transition-opacity! duration-200!"
+              class="flex items-bottom gap-2 text-[#C9C9C9]! hover:opacity-80! active:opacity-60! transition-opacity! duration-200!"
             >
               <span>{{ footerData.designer.text }}</span>
               <IvankinLogo class="h-4 md:h-5" />
@@ -150,7 +152,4 @@ const scrollToSection = (event: Event, targetId: string) => {
   </footer>
 </template>
 
-<style scoped>
-/* Дополнительные стили, если Tailwind не покрывает все нюансы.
-   В данном случае, все стили реализованы через Tailwind классы. */
-</style>
+<style scoped></style>

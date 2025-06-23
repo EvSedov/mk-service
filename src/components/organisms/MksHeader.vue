@@ -33,7 +33,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <li>
             <a
               href="#main"
-              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-5 py-4 rounded"
+              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 px-5 py-4 rounded"
               @click="scrollToSection($event, 'main')"
               >Главная</a
             >
@@ -41,7 +41,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <li>
             <a
               href="#продукция"
-              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-5 py-4 rounded"
+              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 px-5 py-4 rounded"
               @click="scrollToSection($event, 'продукция')"
               >Продукция</a
             >
@@ -49,7 +49,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <li>
             <a
               href="#партнеры"
-              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-5 py-4 rounded"
+              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 px-5 py-4 rounded"
               @click="scrollToSection($event, 'партнеры')"
               >Партнеры</a
             >
@@ -57,7 +57,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <li>
             <a
               href="#команда"
-              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-5 py-4 rounded"
+              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 px-5 py-4 rounded"
               @click="scrollToSection($event, 'команда')"
               >Команда</a
             >
@@ -65,7 +65,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <li>
             <a
               href="#контакты"
-              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-5 py-4 rounded"
+              class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 px-5 py-4 rounded"
               @click="scrollToSection($event, 'контакты')"
               >Контакты</a
             >
@@ -77,7 +77,7 @@ const scrollToSection = (event: Event, targetId: string) => {
       >
         <span class="font-light text-lg">Отдел продаж</span>
         <a
-          class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 hover:bg-black/20 px-2 py-1 rounded transition-colors duration-200"
+          class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 px-2 py-1 rounded transition-colors duration-200"
           href="tel:+79137400363"
         >
           <IconPhone />

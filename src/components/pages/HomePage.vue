@@ -18,7 +18,7 @@ import MksInfo from '@/components/organisms/sections/MksInfo.vue';
     />
     <MksProductsSection />
     <SectionTitle
-      title="Торговые марки"
+      title="Бренды"
       text="Доставка инстументов и материалов от производителей"
     />
     <MksBrandsLogosSection />
