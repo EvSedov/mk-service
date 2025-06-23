@@ -30,6 +30,7 @@ import MksInfo from '@/components/organisms/sections/MksInfo.vue';
     />
     <MksTeam />
     <SectionTitle
+      id="contacts-section"
       title="Контакты"
       text="Свяжитесь с нами для составления заявки"
     />

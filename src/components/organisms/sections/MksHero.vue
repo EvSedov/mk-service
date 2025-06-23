@@ -2,6 +2,13 @@
 import MksHeader from '@/components/organisms/MksHeader.vue';
 import MksButton from '@/components/atoms/MksButton.vue';
 import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
+
+const scrollToContacts = () => {
+  const contactsSection = document.getElementById('contacts-section');
+  if (contactsSection) {
+    contactsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 </script>
 
 <template>
@@ -31,6 +38,7 @@ import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
           <MksButton
             label="Контакты"
             class="text-black bg-amber-300 w-[264px] h-26 text-3xl font-semibold rounded-xl hidden 2xl:block"
+            @click="scrollToContacts"
           />
         </div>
         <div class="hidden lg:block">
