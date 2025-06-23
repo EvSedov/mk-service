@@ -15,13 +15,20 @@ const companyData = {
   ],
   button: {
     text: 'Скачать реквизиты',
-    link: '/path/to/requisites.pdf', // Замените на реальный путь
+    link: new URL(
+      '/public/docs/Карточка_МК-СЕРВИС_Снабжение_ОСНОВНАЯ.pdf',
+      import.meta.url
+    ).href,
   },
 };
 
 const downloadRequisites = () => {
-  // Логика для скачивания файла, например:
-  console.log('Скачать реквизиты');
+  const link = document.createElement('a');
+  link.href = companyData.button.link;
+  link.setAttribute('download', 'Карточка МК-СЕРВИС Снабжение ОСНОВНАЯ.pdf');
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 };
 </script>
 

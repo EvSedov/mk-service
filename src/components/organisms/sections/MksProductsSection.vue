@@ -93,7 +93,10 @@ const products = [
 const commercialOffer = {
   icon: '', // Placeholder, icon will be added later
   text: 'Получить коммерческое предложение',
-  link: '#', // Placeholder link
+  link: new URL(
+    '/public/docs/Коммерческое_предложение_МК-СС.pdf',
+    import.meta.url
+  ).href, // Dynamic link using new URL
 };
 </script>
 
@@ -117,6 +120,7 @@ const commercialOffer = {
       <div class="mt-37.5! text-center">
         <a
           :href="commercialOffer.link"
+          download="Коммерческое предложение МК-СС.pdf"
           class="inline-flex items-center text-white text-xl font-semibold underline px-5 py-4 rounded-xl transition-all duration-200 hover:bg-black/20 active:bg-black/40 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner"
         >
           <!-- Placeholder for PDF icon -->
