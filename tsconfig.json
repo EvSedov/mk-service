@@ -15,7 +15,8 @@
     "types": ["node"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "ymaps3": ["./node_modules/@yandex/ymaps3-types"]
     },
     "moduleResolution": "node",
     "allowJs": true,

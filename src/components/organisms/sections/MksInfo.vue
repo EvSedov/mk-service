@@ -9,7 +9,6 @@ import {
   YandexMapDefaultMarker,
 } from 'vue-yandex-maps';
 
-// Можно использовать для различных преобразований
 const map = shallowRef<null | YMap>(null);
 </script>
 

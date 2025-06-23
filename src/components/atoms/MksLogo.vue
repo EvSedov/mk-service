@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="@/assets/images/Logo.svg" alt="MK Сервис Logo" />
+    <img src="@/assets/images/MK_logo_for_website.png" alt="MK Сервис Logo" />
   </div>
 </template>
 
