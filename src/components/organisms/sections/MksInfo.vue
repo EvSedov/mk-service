@@ -40,7 +40,7 @@ const map = shallowRef<null | YMap>(null);
     <!-- Информационная карточка (absolute for large screens) -->
 
     <div
-      class="hidden xl:flex xl:justify-center absolute z-10 p-8 w-full xl:max-w-lg xl:m-26!"
+      class="hidden xl:flex xl:justify-center absolute z-10 p-8 w-full xl:max-w-xl xl:m-26!"
     >
       <MksInfoCard />
     </div>

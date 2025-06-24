@@ -5,12 +5,19 @@ const companyData = {
     { label: 'ИНН', value: '5405010849' },
     {
       label: 'Адрес',
-      value:
-        'Российская федерация, 630099,\nНовосибирская область,\nгород Новосибирск,\nул. Вокзальная магистраль 15, \nофис 717',
+      value: 'г. Новосибирск,\nул. Вокзальная магистраль 15, \nофис 717',
     },
     {
       label: 'Склад',
-      value: 'город Новосибирск, Улица Фрунзе, 5 к1',
+      value: 'г. Новосибирск, ул. Фрунзе 5, к.1',
+    },
+    {
+      label: 'Управляющий',
+      value: 'mk-service.snab@mail.ru, \n+7-913-740-04-59',
+    },
+    {
+      label: 'Бухгалтерия',
+      value: 'buh_mk-ss@mail.ru, \n+7-952-923-65-80',
     },
   ],
   button: {
@@ -36,17 +43,21 @@ const downloadRequisites = () => {
   <div
     class="bg-[#F7D156] p-6 md:p-12.5 md:rounded-2xl shadow-xl flex flex-col items-start space-y-4 w-full h-full mx-auto md:max-w-md lg:max-w-lg"
   >
-    <h2 class="text-[22px]! font-black! text-[#333333] mb-8!">
-      {{ companyData.name }}
-    </h2>
+    <div class="mx-auto! md:mx-0! w-[248px]">
+      <div class="w-full flex items-start justify-start">
+        <h2 class="text-[22px]! font-black! text-[#333333] mb-8! text-left!">
+          {{ companyData.name }}
+        </h2>
+      </div>
+    </div>
 
-    <div class="mb-11.5!">
+    <div class="mb-5! mx-auto! md:mx-0! md:w-full">
       <div
         v-for="(item, index) in companyData.details"
         :key="index"
-        class="w-full flex gap-4 items-start justify-start mb-6!"
+        class="w-full flex flex-col lg:flex-row gap-2 lg:gap-4 items-start justify-start mb-6!"
       >
-        <div class="w-16 text-base! font-bold! text-[#333333]">
+        <div class="w-32 text-base! font-bold! text-[#333333]">
           {{ item.label }}
         </div>
         <div
@@ -58,7 +69,7 @@ const downloadRequisites = () => {
     </div>
 
     <button
-      class="max-w-67.5 self-center bg-[#3366CC] text-white text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-2xl hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner mt-4"
+      class="max-w-50 md:max-w-67.5 self-center bg-[#3366CC] text-white text-[18px]/6 md:text-[23px]/6 font-semibold! py-3 px-6 rounded-lg shadow-xl shadow-black/50 hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:translate-x-0.5 active:translate-y-0.5 active:shadow-inner mt-4"
       @click="downloadRequisites"
     >
       {{ companyData.button.text }}

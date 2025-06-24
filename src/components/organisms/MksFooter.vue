@@ -71,7 +71,7 @@ const scrollToSection = (event: Event, targetId: string) => {
           <!-- Контактный телефон -->
           <div class="mb-11.5!">
             <a
-              class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 hover:bg-black/20 px-2 py-1 rounded transition-colors duration-200"
+              class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 px-2 py-1 rounded transition-colors duration-200"
               href="tel:+79137400363"
             >
               <IconPhone />

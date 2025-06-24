@@ -47,7 +47,7 @@ const team = ref([
     fullName: ['Хозяйкина', 'Анна'],
     job: 'Главный бухгалтер',
     // phone: '+7 913 740-03-63',
-    email: 'buh-tiko_groups@mail.ru',
+    email: 'buh_mk-ss@mail.ru',
   },
 ]);
 </script>

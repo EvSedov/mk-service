@@ -4,7 +4,7 @@ import MksButton from '@/components/atoms/MksButton.vue';
 import StatisticsCard from '@/components/molecules/StatisticsCard.vue';
 
 const scrollToContacts = () => {
-  const contactsSection = document.getElementById('contacts-section');
+  const contactsSection = document.getElementById('контакты');
   if (contactsSection) {
     contactsSection.scrollIntoView({ behavior: 'smooth' });
   }
