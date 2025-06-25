@@ -44,6 +44,12 @@ const scrollToSection = (event: Event, targetId: string) => {
       >Продукция</a
     >
     <a
+      href="#бренды"
+      class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-2"
+      @click="scrollToSection($event, 'бренды')"
+      >Бренды</a
+    >
+    <a
       href="#партнеры"
       class="text-white font-bold text-lg hover:text-yellow-400 active:text-yellow-500 transition-colors duration-200 hover:bg-black/20 px-2"
       @click="scrollToSection($event, 'партнеры')"

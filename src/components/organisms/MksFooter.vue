@@ -31,6 +31,7 @@ const footerData = ref({
   navigation: [
     { label: 'Главная', id: 'main' },
     { label: 'Продукция', id: 'продукция' },
+    { label: 'Бренды', id: 'бренды' },
     { label: 'Партнеры', id: 'партнеры' },
     { label: 'Команда', id: 'команда' },
     { label: 'Контакты', id: 'контакты' },
