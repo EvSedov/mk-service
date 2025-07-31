@@ -58,14 +58,14 @@
       const footerData = {
         logo: { src: '/path/to/mks-logo.svg', alt: 'МК СЕРВИС' },
         contacts: {
-          phone: '+7 (913) 740-03-63',
+          phone: '+7 (953) 780-84-64',
           schedule: 'пн-пт 09:00-17:00 (НСК)',
           feedbackTitle: 'Обратная связь',
           messengers: [
             {
               name: 'WhatsApp',
               icon: 'IconWhatsApp.vue',
-              url: 'https://wa.me/79137400363',
+              url: 'https://wa.me/79537808464',
             },
             {
               name: 'Telegram',

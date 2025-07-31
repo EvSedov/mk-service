@@ -10,14 +10,14 @@ import IvankinLogo from '@/components/atoms/IvankinLogo.vue';
 const footerData = ref({
   // logo: { src: '/src/assets/images/logo-mks-service.png', alt: 'МК СЕРВИС' }, // Удалено, т.к. используется компонент MksLogo
   contacts: {
-    phone: '+7 (913) 740-03-63',
+    phone: '+7 (953) 780-84-64',
     schedule: 'пн-пт 09:00-17:00 (НСК)',
     feedbackTitle: 'Обратная связь',
     messengers: [
       {
         name: 'WhatsApp',
         component: markRaw(IconWhatsApp),
-        url: 'https://wa.me/79137400363',
+        url: 'https://wa.me/79537808464',
         class: 'w-9 h-9',
       },
       {
@@ -73,12 +73,12 @@ const scrollToSection = (event: Event, targetId: string) => {
           <div class="mb-11.5!">
             <a
               class="flex gap-2 items-center text-[#FFD13D] hover:text-white active:text-yellow-500 px-2 py-1 rounded transition-colors duration-200"
-              href="tel:+79137400363"
+              href="tel:+73833808464 "
             >
               <IconPhone />
               <span class="font-bold text-[24px] text-nowrap"
-                >+7 (913) 740-03-63</span
-              >
+                >+7 (383) 380-84-64
+              </span>
             </a>
             <span class="text-[#C9C9C9] text-[21px]">{{
               footerData.contacts.schedule
