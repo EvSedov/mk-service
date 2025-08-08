@@ -23,7 +23,7 @@ const footerData = ref({
       {
         name: 'Telegram',
         component: markRaw(IconTelegram),
-        url: 'https://t.me/Mikhail_MKCC',
+        url: 'https://t.me/MK_service_snab',
         class: 'w-10 h-10',
       },
     ],
@@ -39,7 +39,7 @@ const footerData = ref({
   copyright: '© 2025 ООО «МК-СЕРВИС.СНАБЖЕНИЕ»',
   designer: {
     text: 'Дизайн',
-    url: 'https://t.me/mirvladIV', // Обновленная ссылка на дизайнера
+    url: 'https://t.me/mirvladIV', // Ссылка на профиль дизайнера в Telegram
   },
 });
 
