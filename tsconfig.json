@@ -13,12 +13,11 @@
       "./node_modules/@yandex/ymaps3-types"
     ],
     "types": ["node"],
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "ymaps3": ["./node_modules/@yandex/ymaps3-types"]
     },
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowJs": true,
     "outDir": "dist"
   },

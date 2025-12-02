@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "*"],
+      "*": ["./node_modules/*", "./*"],
       "@/*": ["./src/*"]
     },
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "ESNext",
     "jsx": "preserve",
     "allowJs": true,
